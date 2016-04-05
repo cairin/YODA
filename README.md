@@ -1,4 +1,4 @@
-# YODA
+# YODA :camel:
 ## Your Own Digital Accelerator
 ### EEE 4084 F Project
 
