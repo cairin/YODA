@@ -1,4 +1,4 @@
-# YODA :camel:
+# YODA
 ## Your Own Digital Accelerator
 ### EEE 4084 F Project
 
@@ -6,10 +6,10 @@
 
 #### Hand-ins
 
-- [] Part 1: Feature List
-- [] Part 2: Conceptual Design
-- [] Part 3: Final Paper
-- [] Part 4: Conference Presentation
+- [ ] Part 1: Feature List
+- [ ] Part 2: Conceptual Design
+- [ ] Part 3: Final Paper
+- [ ] Part 4: Conference Presentation
 
 #### Part 1: Feature List [10 Marks]
 1. Draw up a project feature list and prototype specification, and publish it on the Vula Blog. There is an example blog so that you can have a rough idea about what is required. This specification is what you plan to implement for the proof-of-concept prototype. The idea is to make it involved enough so that it is a worthy project, but easy enough so that you can implement it in the time provided. The course lecturer and TA will evaluate these and either ask you to add more features, or recommend that you remove some.
