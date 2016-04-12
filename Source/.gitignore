@@ -5,6 +5,7 @@
 !.gitignore
 !Readme.md
 !*.v
+!*.vhd
 !*.ufc
 # etc...
 
