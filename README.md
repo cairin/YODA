@@ -1,6 +1,7 @@
-# YODA
-## Your Own Digital Accelerator
-### EEE 4084 F Project
+# The Fourier Awakens
+## YODA
+### Your Own Digital Accelerator
+#### EEE 4084 F Project
 
 [100 Marks]
 
