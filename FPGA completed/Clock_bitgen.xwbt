@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Users\Cairin\Documents\GitHub\YODA\FPGA completed\Clock.ncd
-OUTFILE=C:\Users\Cairin\Documents\GitHub\YODA\FPGA completed\Clock.bit
-FAMILY=Artix7
-PART=xc7a100t-3csg324
-WORKINGDIR=C:\Users\Cairin\Documents\GitHub\YODA\FPGA completed
-LICENSE=WebPack
-USER_INFO=211185118_0_0_673

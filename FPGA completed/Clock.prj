@@ -1,6 +1,0 @@
-verilog work "BCD_Decoder.v"
-verilog work "SS_Driver.v"
-verilog work "minuteButton.v"
-verilog work "hourButton.v"
-verilog work "Delay_Reset.v"
-verilog work "Main.v"

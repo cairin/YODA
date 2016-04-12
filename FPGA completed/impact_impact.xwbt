@@ -1,8 +1,0 @@
-INTSTYLE=impact
-INFILE=C:\Users\Cairin\Documents\GitHub\YODA\FPGA completed\impact.xsl
-OUTFILE=C:\Users\Cairin\Documents\GitHub\YODA\FPGA completed\impact.xsl
-FAMILY=Single
-PART=Single
-WORKINGDIR=C:\Users\Cairin\Documents\GitHub\YODA\FPGA completed
-LICENSE=iMPACT
-USER_INFO=iMPACT
