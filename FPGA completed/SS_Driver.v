@@ -21,16 +21,12 @@ reg [7:0]pwmCount;
 always @(posedge Clk) begin
 Count <= Count + 1'b1;
 pwmCount<=pwmCount + 1'b1;
-//SegmentDrivers <= 4'hF0;
 if     ( Reset) SegmentDrivers <= 4'hE;
 else if(&Count) SegmentDrivers <= {SegmentDrivers[2:0], SegmentDrivers[3]};
 end
 //------------------------------------------------------------------------------
 always @(*) begin // This describes a purely combinational circuit
 SevenSegment[7] <= 1'b1; // Decimal point always off
-
-//SegmentDrivers[0]<='b1;
-//SegmentDrivers[1]<='b1;
 if(Reset) begin
 SevenSegment[6:0] <= 7'h7F; // All off during Reset
 end else if(pwmCount<PWM)begin

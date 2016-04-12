@@ -5,7 +5,7 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="189" delta="new" >"/home/bluelabuser/Desktop/FPGA/Main.v" Line 36: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">SegmentDrivers</arg>&gt;. Formal port size is <arg fmt="%d" index="2">4</arg>-bit while actual signal size is <arg fmt="%d" index="1">8</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="189" delta="new" >"C:\Users\Cairin\Documents\GitHub\YODA\FPGA completed\Main.v" Line 36: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">SegmentDrivers</arg>&gt;. Formal port size is <arg fmt="%d" index="2">4</arg>-bit while actual signal size is <arg fmt="%d" index="1">8</arg>-bit.
 </msg>
 
 <msg type="info" file="Xst" num="3212" delta="old" >HDL ADVISOR - Asynchronous or synchronous initialization of the register &lt;<arg fmt="%s" index="1">hours10</arg>&gt; prevents it from being combined with the RAM &lt;<arg fmt="%s" index="2">Mram_SevenSegment</arg>&gt; for implementation as read-only block RAM.

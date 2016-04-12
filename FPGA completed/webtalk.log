@@ -3,8 +3,8 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
 Project Information
 --------------------
-ProjectID=954FEB550D9CAAF8EF9942B281386983
-ProjectIteration=58
+ProjectID=f1ced2eca9504d8c8dac6cdbc7fa6e5d
+ProjectIteration=1
 
 WebTalk Summary
 ----------------
@@ -13,4 +13,4 @@ INFO:WebTalk:2 - WebTalk is enabled.
 INFO:WebTalk:8 - WebTalk Install setting is ON.
 INFO:WebTalk:6 - WebTalk User setting is ON.
 
-INFO:WebTalk:5 - /home/bluelabuser/Desktop/FPGA/usage_statistics_webtalk.html WebTalk report has not been sent to Xilinx.  Please check your network and proxy settings.  For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/14.7/ISE_DS/ISE/data/reports/webtalk_introduction.html
+INFO:WebTalk:4 - C:/Users/Cairin/Documents/GitHub/YODA/FPGA completed/usage_statistics_webtalk.html WebTalk report has been successfully sent to Xilinx on 2016-04-12T22:58:43.  For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/14.7/ISE_DS/ISE/data/reports/webtalk_introduction.html

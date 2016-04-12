@@ -1,4 +1,4 @@
-Release 14.7 Map P.20131013 (lin64)
+Release 14.7 Map P.20131013 (nt)
 Xilinx Mapping Report File for Design 'Clock'
 
 Design Information
@@ -10,7 +10,7 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Tue Apr 12 17:50:52 2016
+Mapped Date    : Tue Apr 12 22:56:58 2016
 
 Design Summary
 --------------
@@ -91,9 +91,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                3.31
 
-Peak Memory Usage:  1248 MB
-Total REAL time to MAP completion:  25 secs 
-Total CPU time to MAP completion:   25 secs 
+Peak Memory Usage:  602 MB
+Total REAL time to MAP completion:  17 secs 
+Total CPU time to MAP completion:   17 secs 
 
 Table of Contents
 -----------------
@@ -116,13 +116,9 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:Security:42 - Your software subscription period has lapsed. Your current
-version of Xilinx tools will continue to function, but you no longer qualify for
-Xilinx software updates or new releases.
 
 Section 3 - Informational
 -------------------------
-INFO:Security:54 - 'xc7a100t' is a WebPack part.
 INFO:MapLib:159 - Net Timing constraints on signal Clk_100M are pushed forward
    through input buffer.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew

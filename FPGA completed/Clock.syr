@@ -1,21 +1,18 @@
-Release 14.7 - xst P.20131013 (lin64)
+Release 14.7 - xst P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> 
-Parameter TMPDIR set to xst/projnav.tmp
+--> Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.06 secs
  
---> 
-Parameter xsthdpdir set to xst
+--> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.06 secs
  
---> 
-Reading design: Clock.prj
+--> Reading design: Clock.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -108,17 +105,17 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/bluelabuser/Desktop/FPGA/BCD_Decoder.v" into library work
+Analyzing Verilog file "C:\Users\Cairin\Documents\GitHub\YODA\FPGA completed\BCD_Decoder.v" into library work
 Parsing module <BCD_Decoder>.
-Analyzing Verilog file "/home/bluelabuser/Desktop/FPGA/SS_Driver.v" into library work
+Analyzing Verilog file "C:\Users\Cairin\Documents\GitHub\YODA\FPGA completed\SS_Driver.v" into library work
 Parsing module <SS_Driver>.
-Analyzing Verilog file "/home/bluelabuser/Desktop/FPGA/minuteButton.v" into library work
+Analyzing Verilog file "C:\Users\Cairin\Documents\GitHub\YODA\FPGA completed\minuteButton.v" into library work
 Parsing module <minuteButton>.
-Analyzing Verilog file "/home/bluelabuser/Desktop/FPGA/hourButton.v" into library work
+Analyzing Verilog file "C:\Users\Cairin\Documents\GitHub\YODA\FPGA completed\hourButton.v" into library work
 Parsing module <hourButton>.
-Analyzing Verilog file "/home/bluelabuser/Desktop/FPGA/Delay_Reset.v" into library work
+Analyzing Verilog file "C:\Users\Cairin\Documents\GitHub\YODA\FPGA completed\Delay_Reset.v" into library work
 Parsing module <Delay_Reset>.
-Analyzing Verilog file "/home/bluelabuser/Desktop/FPGA/Main.v" into library work
+Analyzing Verilog file "C:\Users\Cairin\Documents\GitHub\YODA\FPGA completed\Main.v" into library work
 Parsing module <Clock>.
 
 =========================================================================
@@ -132,7 +129,7 @@ Elaborating module <Delay_Reset>.
 Elaborating module <SS_Driver>.
 
 Elaborating module <BCD_Decoder>.
-WARNING:HDLCompiler:189 - "/home/bluelabuser/Desktop/FPGA/Main.v" Line 36: Size mismatch in connection of port <SegmentDrivers>. Formal port size is 4-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:189 - "C:\Users\Cairin\Documents\GitHub\YODA\FPGA completed\Main.v" Line 36: Size mismatch in connection of port <SegmentDrivers>. Formal port size is 4-bit while actual signal size is 8-bit.
 
 Elaborating module <minuteButton>.
 
@@ -143,7 +140,7 @@ Elaborating module <hourButton>.
 =========================================================================
 
 Synthesizing Unit <Clock>.
-    Related source file is "/home/bluelabuser/Desktop/FPGA/Main.v".
+    Related source file is "C:\Users\Cairin\Documents\GitHub\YODA\FPGA completed\Main.v".
     Found 4-bit register for signal <minutes>.
     Found 4-bit register for signal <minutes10>.
     Found 4-bit register for signal <hours>.
@@ -165,7 +162,7 @@ Synthesizing Unit <Clock>.
 Unit <Clock> synthesized.
 
 Synthesizing Unit <Delay_Reset>.
-    Related source file is "/home/bluelabuser/Desktop/FPGA/Delay_Reset.v".
+    Related source file is "C:\Users\Cairin\Documents\GitHub\YODA\FPGA completed\Delay_Reset.v".
     Found 23-bit register for signal <Count>.
     Found 1-bit register for signal <Reset>.
     Found 1-bit register for signal <LocalReset>.
@@ -176,13 +173,13 @@ Synthesizing Unit <Delay_Reset>.
 Unit <Delay_Reset> synthesized.
 
 Synthesizing Unit <SS_Driver>.
-    Related source file is "/home/bluelabuser/Desktop/FPGA/SS_Driver.v".
+    Related source file is "C:\Users\Cairin\Documents\GitHub\YODA\FPGA completed\SS_Driver.v".
     Found 8-bit register for signal <pwmCount>.
     Found 4-bit register for signal <SegmentDrivers>.
     Found 17-bit register for signal <Count>.
     Found 17-bit adder for signal <Count[16]_GND_3_o_add_1_OUT> created at line 22.
     Found 8-bit adder for signal <pwmCount[7]_GND_3_o_add_2_OUT> created at line 23.
-    Found 8-bit comparator greater for signal <pwmCount[7]_PWM[7]_LessThan_10_o> created at line 36
+    Found 8-bit comparator greater for signal <pwmCount[7]_PWM[7]_LessThan_10_o> created at line 32
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  29 D-type flip-flop(s).
@@ -191,14 +188,14 @@ Synthesizing Unit <SS_Driver>.
 Unit <SS_Driver> synthesized.
 
 Synthesizing Unit <BCD_Decoder>.
-    Related source file is "/home/bluelabuser/Desktop/FPGA/BCD_Decoder.v".
+    Related source file is "C:\Users\Cairin\Documents\GitHub\YODA\FPGA completed\BCD_Decoder.v".
     Found 16x7-bit Read Only RAM for signal <SevenSegment>
     Summary:
 	inferred   1 RAM(s).
 Unit <BCD_Decoder> synthesized.
 
 Synthesizing Unit <minuteButton>.
-    Related source file is "/home/bluelabuser/Desktop/FPGA/minuteButton.v".
+    Related source file is "C:\Users\Cairin\Documents\GitHub\YODA\FPGA completed\minuteButton.v".
     Found 1-bit register for signal <delayState>.
     Found 1-bit register for signal <buttonState>.
     Found 24-bit register for signal <delay>.
@@ -210,7 +207,7 @@ Synthesizing Unit <minuteButton>.
 Unit <minuteButton> synthesized.
 
 Synthesizing Unit <hourButton>.
-    Related source file is "/home/bluelabuser/Desktop/FPGA/hourButton.v".
+    Related source file is "C:\Users\Cairin\Documents\GitHub\YODA\FPGA completed\hourButton.v".
     Found 1-bit register for signal <delayState>.
     Found 1-bit register for signal <buttonState>.
     Found 24-bit register for signal <delay>.
@@ -576,13 +573,12 @@ Clk_100M       |    2.838|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.02 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.80 secs
  
 --> 
 
-
-Total memory usage is 507396 kilobytes
+Total memory usage is 315256 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    9 (   0 filtered)

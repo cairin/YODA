@@ -1,4 +1,4 @@
-Release 14.7 Map P.20131013 (lin64)
+Release 14.7 Map P.20131013 (nt)
 Xilinx Map Application Log File for Design 'Clock'
 
 Design Information
@@ -10,14 +10,8 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Tue Apr 12 17:50:52 2016
+Mapped Date    : Tue Apr 12 22:56:58 2016
 
-vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-INFO:Security:54 - 'xc7a100t' is a WebPack part.
-WARNING:Security:42 - Your software subscription period has lapsed. Your current
-version of Xilinx tools will continue to function, but you no longer qualify for
-Xilinx software updates or new releases.
-----------------------------------------------------------------------
 Mapping design into LUTs...
 Running directed packing...
 Running delay-based LUT packing...
@@ -25,52 +19,52 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 18 secs 
-Total CPU  time at the beginning of Placer: 18 secs 
+Total REAL time at the beginning of Placer: 11 secs 
+Total CPU  time at the beginning of Placer: 11 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:49c7010b) REAL time: 20 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:49c7010b) REAL time: 12 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:49c7010b) REAL time: 20 secs 
+Phase 2.7  Design Feasibility Check (Checksum:49c7010b) REAL time: 12 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:49c7010b) REAL time: 20 secs 
+Phase 3.31  Local Placement Optimization (Checksum:49c7010b) REAL time: 12 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:49c7010b) REAL time: 23 secs 
+(Checksum:49c7010b) REAL time: 15 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:49c7010b) REAL time: 23 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:49c7010b) REAL time: 15 secs 
 
 Phase 6.3  Local Placement Optimization
-Phase 6.3  Local Placement Optimization (Checksum:49c7010b) REAL time: 23 secs 
+Phase 6.3  Local Placement Optimization (Checksum:49c7010b) REAL time: 15 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:49c7010b) REAL time: 23 secs 
+Phase 7.5  Local Placement Optimization (Checksum:49c7010b) REAL time: 15 secs 
 
 Phase 8.8  Global Placement
 ..
 ................
 ................
-Phase 8.8  Global Placement (Checksum:b31ec0a9) REAL time: 23 secs 
+Phase 8.8  Global Placement (Checksum:b31ec0a9) REAL time: 15 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:b31ec0a9) REAL time: 23 secs 
+Phase 9.5  Local Placement Optimization (Checksum:b31ec0a9) REAL time: 15 secs 
 
 Phase 10.18  Placement Optimization
-Phase 10.18  Placement Optimization (Checksum:5a75891e) REAL time: 24 secs 
+Phase 10.18  Placement Optimization (Checksum:5a75891e) REAL time: 16 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:5a75891e) REAL time: 24 secs 
+Phase 11.5  Local Placement Optimization (Checksum:5a75891e) REAL time: 16 secs 
 
 Phase 12.34  Placement Validation
-Phase 12.34  Placement Validation (Checksum:5a75891e) REAL time: 24 secs 
+Phase 12.34  Placement Validation (Checksum:5a75891e) REAL time: 16 secs 
 
-Total REAL time to Placer completion: 24 secs 
-Total CPU  time to Placer completion: 24 secs 
+Total REAL time to Placer completion: 16 secs 
+Total CPU  time to Placer completion: 16 secs 
 Running post-placement packing...
 Writing output files...
 
@@ -155,9 +149,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                3.31
 
-Peak Memory Usage:  1248 MB
-Total REAL time to MAP completion:  25 secs 
-Total CPU time to MAP completion:   25 secs 
+Peak Memory Usage:  602 MB
+Total REAL time to MAP completion:  17 secs 
+Total CPU time to MAP completion:   17 secs 
 
 Mapping completed.
 See MAP report file "Clock_map.mrp" for details.

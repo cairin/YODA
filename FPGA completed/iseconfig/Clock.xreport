@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-04-12T16:25:25</DateModified>
+  <DateModified>2016-04-12T23:05:44</DateModified>
   <ModuleName>Clock</ModuleName>
   <SummaryTimeStamp>2016-04-11T17:14:09</SummaryTimeStamp>
-  <SavedFilePath>/home/bluelabuser/Desktop/FPGA/iseconfig/Clock.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/bluelabuser/Desktop/FPGA/</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/Cairin/Documents/GitHub/YODA/FPGA completed/iseconfig/Clock.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Cairin/Documents/GitHub/YODA/FPGA completed\</ImplementationReportsDirectory>
   <DateInitialized>2016-04-11T17:07:22</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
