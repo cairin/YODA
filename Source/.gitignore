@@ -6,7 +6,7 @@
 !Readme.md
 !*.v
 !*.vhd
-!*.ufc
+!*.ucf
 # etc...
 
 # ...even if they are in subdirectories
