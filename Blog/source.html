@@ -1,0 +1,27 @@
+<p style="text-align: right;">P19: DDS</p>
+
+<hr />
+<h1 style="text-align: center;">The Fourier Awakens</h1>
+
+<p style="text-align: center;">Robbie Katz (KTZROB006) | Benji Lewis (LWSBEN002) | Cairin Michie (MCHCAI001)</p>
+
+<hr />
+<h2><span style="font-family: calibri , sans-serif;">Project Overview</span></h2>
+
+<p>In this project a direct digital synthesizer<sup>1</sup> will be designed. This digital synthesizer will be used to implement a Fourier Series estimation. The user specifies the waveform, as well as the amplitude, phase and frequency of the waveform that they want synthesized on the FPGA. The user can also specify the number of terms in the Fourier estimation. The FPGA processes this information with the use of the Fourier series equation, and outputs the results.</p>
+
+<h2><span style="font-family: calibri , sans-serif;">Prototype Specification</span></h2>
+
+<ul>
+	<li>A CLI will be developed for the user to specify the waveform, and desired parameters.</li>
+	<li>The information required by the FPGA for the waveform synthesis will be passed to the FPGA via a text file. This will serve as a look-up table for the DDS modules.</li>
+	<li>The DDS modules each output a sine wave, with amplitude, phase and frequency as specified by the look-up table. The phase is used to convert the sine wave to a cosine wave<sup>2</sup>. This is done because the Fourier Series equation requires a summation of sine and cosine waveforms.</li>
+	<li>The output of each DDS module is summed, to produce the final waveform.</li>
+	<li>The final waveform will be outputted through a DAC. If time permits, an oscilloscope module will be developed that will be used to display the output waveform on a monitor using the VGA connection.</li>
+</ul>
+
+<h2><span style="font-family: calibri , sans-serif;">Bibliography</span></h2>
+
+<p>[1] All About Direct Digital Synthesis, available from <a href="http://www.analog.com/library/analogDialogue/archives/38-08/dds.pdf" target="_blank">http://www.analog.com/library/analogDialogue/archives/38-08/dds.pdf</a></p>
+
+<p>[2] Fourier Series, <a href="http://mathworld.wolfram.com/FourierSeries.html" target="_blank">http://mathworld.wolfram.com/FourierSeries.html</a></p>
