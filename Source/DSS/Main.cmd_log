@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/Cairin/Documents/GitHub/YODA/Source/DSS/Main.xst" -ofn "C:/Users/Cairin/Documents/GitHub/YODA/Source/DSS/Main.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 Main.ngc Main.ngd  
