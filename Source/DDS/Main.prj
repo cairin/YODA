@@ -1,0 +1,8 @@
+verilog work "ipcore_dir/BROM_Sin.v"
+verilog work "BCD_Decoder.v"
+verilog work "SS_Driver.v"
+verilog work "Receive.v"
+verilog work "Delay_Reset.v"
+verilog work "DDS.v"
+verilog work "AUD.v"
+verilog work "Main.v"

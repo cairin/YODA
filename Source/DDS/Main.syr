@@ -1,0 +1,692 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.03 secs
+ 
+--> 
+Reading design: Main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Main.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Main"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : Main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/bluelabuser/Desktop/DDS/ipcore_dir/BROM_Sin.v" into library work
+Parsing module <BROM_Sin>.
+Analyzing Verilog file "/home/bluelabuser/Desktop/DDS/BCD_Decoder.v" into library work
+Parsing module <BCD_Decoder>.
+Analyzing Verilog file "/home/bluelabuser/Desktop/DDS/SS_Driver.v" into library work
+Parsing module <SS_Driver>.
+Analyzing Verilog file "/home/bluelabuser/Desktop/DDS/Receive.v" into library work
+Parsing module <Receive>.
+Analyzing Verilog file "/home/bluelabuser/Desktop/DDS/Delay_Reset.v" into library work
+Parsing module <Delay_Reset>.
+Analyzing Verilog file "/home/bluelabuser/Desktop/DDS/DDS.v" into library work
+Parsing module <DDS>.
+Analyzing Verilog file "/home/bluelabuser/Desktop/DDS/AUD.v" into library work
+Parsing module <AUD>.
+Analyzing Verilog file "/home/bluelabuser/Desktop/DDS/Main.v" into library work
+Parsing module <Main>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Main>.
+
+Elaborating module <Delay_Reset>.
+
+Elaborating module <SS_Driver>.
+
+Elaborating module <BCD_Decoder>.
+WARNING:HDLCompiler:189 - "/home/bluelabuser/Desktop/DDS/Main.v" Line 26: Size mismatch in connection of port <BCD3>. Formal port size is 4-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/bluelabuser/Desktop/DDS/Main.v" Line 27: Size mismatch in connection of port <SegmentDrivers>. Formal port size is 4-bit while actual signal size is 8-bit.
+
+Elaborating module <AUD>.
+
+Elaborating module <DDS>.
+
+Elaborating module <BROM_Sin>.
+WARNING:HDLCompiler:1499 - "/home/bluelabuser/Desktop/DDS/ipcore_dir/BROM_Sin.v" Line 39: Empty module <BROM_Sin> remains a black box.
+WARNING:HDLCompiler:413 - "/home/bluelabuser/Desktop/DDS/DDS.v" Line 18: Result of 32-bit expression is truncated to fit in 8-bit target.
+
+Elaborating module <Receive>.
+WARNING:HDLCompiler:413 - "/home/bluelabuser/Desktop/DDS/Receive.v" Line 26: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "/home/bluelabuser/Desktop/DDS/Receive.v" Line 32: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Main>.
+    Related source file is "/home/bluelabuser/Desktop/DDS/Main.v".
+WARNING:Xst:2935 - Signal 'AUD_SD', unconnected in block 'Main', is tied to its initial value (1).
+    Found 1-bit register for signal <busyState>.
+    Found 32-bit register for signal <M>.
+    Found 8x32-bit Read Only RAM for signal <_n0047>
+    Summary:
+	inferred   1 RAM(s).
+	inferred  33 D-type flip-flop(s).
+Unit <Main> synthesized.
+
+Synthesizing Unit <Delay_Reset>.
+    Related source file is "/home/bluelabuser/Desktop/DDS/Delay_Reset.v".
+    Found 23-bit register for signal <Count>.
+    Found 1-bit register for signal <Reset>.
+    Found 1-bit register for signal <LocalReset>.
+    Found 23-bit adder for signal <Count[22]_GND_2_o_add_2_OUT> created at line 21.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+Unit <Delay_Reset> synthesized.
+
+Synthesizing Unit <SS_Driver>.
+    Related source file is "/home/bluelabuser/Desktop/DDS/SS_Driver.v".
+    Found 8-bit register for signal <PWMcount>.
+    Found 4-bit register for signal <SegmentDrivers>.
+    Found 17-bit register for signal <Count>.
+    Found 17-bit adder for signal <Count[16]_GND_3_o_add_1_OUT> created at line 20.
+    Found 8-bit adder for signal <PWMcount[7]_GND_3_o_add_2_OUT> created at line 21.
+    Found 8-bit comparator greater for signal <PWMcount[7]_PWM[7]_LessThan_10_o> created at line 31
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  29 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <SS_Driver> synthesized.
+
+Synthesizing Unit <BCD_Decoder>.
+    Related source file is "/home/bluelabuser/Desktop/DDS/BCD_Decoder.v".
+    Found 16x7-bit Read Only RAM for signal <SevenSegment>
+    Summary:
+	inferred   1 RAM(s).
+Unit <BCD_Decoder> synthesized.
+
+Synthesizing Unit <AUD>.
+    Related source file is "/home/bluelabuser/Desktop/DDS/AUD.v".
+    Found 1-bit register for signal <AUD_out>.
+    Found 8-bit register for signal <PWMcount>.
+    Found 8-bit adder for signal <PWMcount[7]_GND_9_o_add_1_OUT> created at line 9.
+    Found 8-bit comparator greater for signal <PWM[7]_PWMcount[7]_LessThan_3_o> created at line 10
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   9 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <AUD> synthesized.
+
+Synthesizing Unit <DDS>.
+    Related source file is "/home/bluelabuser/Desktop/DDS/DDS.v".
+WARNING:Xst:647 - Input <Start> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit register for signal <addra>.
+    Found 8-bit register for signal <PWM>.
+    Found 32-bit subtractor for signal <addra[31]_GND_10_o_sub_4_OUT> created at line 21.
+    Found 32-bit adder for signal <addra[31]_M[31]_add_1_OUT> created at line 19.
+    Found 32-bit comparator greater for signal <GND_10_o_addra[31]_LessThan_3_o> created at line 20
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  40 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <DDS> synthesized.
+
+Synthesizing Unit <Receive>.
+    Related source file is "/home/bluelabuser/Desktop/DDS/Receive.v".
+    Found 16-bit register for signal <PRSCL>.
+    Found 1-bit register for signal <BUSY>.
+    Found 1-bit register for signal <RX_FLG>.
+    Found 10-bit register for signal <DATAFLL>.
+    Found 8-bit register for signal <DATA>.
+    Found 4-bit register for signal <INDEX>.
+    Found 16-bit adder for signal <PRSCL[15]_GND_12_o_add_8_OUT> created at line 26.
+    Found 4-bit adder for signal <INDEX[3]_GND_12_o_add_12_OUT> created at line 32.
+    Found 16-bit comparator lessequal for signal <PRSCL[15]_GND_12_o_LessThan_8_o> created at line 25
+    Found 4-bit comparator greater for signal <INDEX[3]_PWR_9_o_LessThan_12_o> created at line 31
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  40 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  13 Multiplexer(s).
+Unit <Receive> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 5
+ 16x7-bit single-port Read Only RAM                    : 4
+ 8x32-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 7
+ 16-bit adder                                          : 1
+ 17-bit adder                                          : 1
+ 23-bit adder                                          : 1
+ 32-bit addsub                                         : 1
+ 4-bit adder                                           : 1
+ 8-bit adder                                           : 2
+# Registers                                            : 18
+ 1-bit register                                        : 6
+ 10-bit register                                       : 1
+ 16-bit register                                       : 1
+ 17-bit register                                       : 1
+ 23-bit register                                       : 1
+ 32-bit register                                       : 2
+ 4-bit register                                        : 2
+ 8-bit register                                        : 4
+# Comparators                                          : 5
+ 16-bit comparator lessequal                           : 1
+ 32-bit comparator greater                             : 1
+ 4-bit comparator greater                              : 1
+ 8-bit comparator greater                              : 2
+# Multiplexers                                         : 16
+ 1-bit 2-to-1 multiplexer                              : 10
+ 32-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 3
+ 8-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/BROM_Sin.ngc>.
+Loading core <BROM_Sin> for timing and area information for instance <LU1>.
+INFO:Xst:2261 - The FF/Latch <BUSY> in Unit <Receive1> is equivalent to the following FF/Latch, which will be removed : <RX_FLG> 
+
+Synthesizing (advanced) Unit <AUD>.
+The following registers are absorbed into counter <PWMcount>: 1 register on signal <PWMcount>.
+Unit <AUD> synthesized (advanced).
+
+Synthesizing (advanced) Unit <BCD_Decoder>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_SevenSegment> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <BCD>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <SevenSegment>  |          |
+    -----------------------------------------------------------------------
+Unit <BCD_Decoder> synthesized (advanced).
+
+Synthesizing (advanced) Unit <DDS>.
+The following registers are absorbed into accumulator <addra>: 1 register on signal <addra>.
+Unit <DDS> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Delay_Reset>.
+The following registers are absorbed into counter <Count>: 1 register on signal <Count>.
+Unit <Delay_Reset> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Main>.
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <DATA> prevents it from being combined with the RAM <Mram__n0047> for implementation as read-only block RAM.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 32-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <dataR<2:0>>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram__n0047> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+Unit <Main> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Receive>.
+The following registers are absorbed into counter <PRSCL>: 1 register on signal <PRSCL>.
+Unit <Receive> synthesized (advanced).
+
+Synthesizing (advanced) Unit <SS_Driver>.
+The following registers are absorbed into counter <Count>: 1 register on signal <Count>.
+The following registers are absorbed into counter <PWMcount>: 1 register on signal <PWMcount>.
+Unit <SS_Driver> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 5
+ 16x7-bit single-port distributed Read Only RAM        : 4
+ 8x32-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 1
+ 4-bit adder                                           : 1
+# Counters                                             : 5
+ 16-bit up counter                                     : 1
+ 17-bit up counter                                     : 1
+ 23-bit up counter                                     : 1
+ 8-bit up counter                                      : 2
+# Accumulators                                         : 1
+ 32-bit updown accumulator                             : 1
+# Registers                                            : 72
+ Flip-Flops                                            : 72
+# Comparators                                          : 5
+ 16-bit comparator lessequal                           : 1
+ 32-bit comparator greater                             : 1
+ 4-bit comparator greater                              : 1
+ 8-bit comparator greater                              : 2
+# Multiplexers                                         : 16
+ 1-bit 2-to-1 multiplexer                              : 10
+ 32-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 3
+ 8-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <BUSY> in Unit <Receive> is equivalent to the following FF/Latch, which will be removed : <RX_FLG> 
+INFO:Xst:2146 - In block <SS_Driver>, Counter <Count> <PWMcount> are equivalent, XST will keep only <Count>.
+WARNING:Xst:1293 - FF/Latch <M_31> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_30> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_29> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_28> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_27> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_26> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_25> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_24> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_23> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_22> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_21> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_20> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_19> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_18> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_17> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_16> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_15> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_14> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_13> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_12> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_11> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_10> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_9> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_8> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_7> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_6> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_5> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_4> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_3> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Main> ...
+
+Optimizing unit <SS_Driver> ...
+
+Optimizing unit <DDS> ...
+
+Optimizing unit <Receive> ...
+WARNING:Xst:1293 - FF/Latch <Receive1/PRSCL_14> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Receive1/PRSCL_15> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_11> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_12> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_13> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_14> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_15> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_16> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_17> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_18> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_19> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_20> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_21> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_22> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_23> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_24> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_25> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_26> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_27> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_28> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_29> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_30> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_31> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <AUD1/PWMcount_4> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <SS_Driver1/Count_4> 
+INFO:Xst:2261 - The FF/Latch <AUD1/PWMcount_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <SS_Driver1/Count_5> 
+INFO:Xst:2261 - The FF/Latch <AUD1/PWMcount_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <SS_Driver1/Count_6> 
+INFO:Xst:2261 - The FF/Latch <AUD1/PWMcount_7> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <SS_Driver1/Count_7> 
+INFO:Xst:2261 - The FF/Latch <AUD1/PWMcount_0> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <SS_Driver1/Count_0> 
+INFO:Xst:2261 - The FF/Latch <AUD1/PWMcount_1> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <SS_Driver1/Count_1> 
+INFO:Xst:2261 - The FF/Latch <AUD1/PWMcount_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <SS_Driver1/Count_2> 
+INFO:Xst:2261 - The FF/Latch <AUD1/PWMcount_3> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <SS_Driver1/Count_3> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 107
+ Flip-Flops                                            : 107
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Main.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 292
+#      GND                         : 2
+#      INV                         : 5
+#      LUT1                        : 59
+#      LUT2                        : 11
+#      LUT3                        : 9
+#      LUT4                        : 13
+#      LUT5                        : 24
+#      LUT6                        : 28
+#      MUXCY                       : 74
+#      VCC                         : 2
+#      XORCY                       : 65
+# FlipFlops/Latches                : 107
+#      FD                          : 57
+#      FDE                         : 14
+#      FDRE                        : 32
+#      FDSE                        : 4
+# RAMS                             : 1
+#      RAMB36E1                    : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 20
+#      IBUF                        : 2
+#      OBUF                        : 18
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             107  out of  126800     0%  
+ Number of Slice LUTs:                  149  out of  63400     0%  
+    Number used as Logic:               149  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    158
+   Number with an unused Flip Flop:      51  out of    158    32%  
+   Number with an unused LUT:             9  out of    158     5%  
+   Number of fully used LUT-FF pairs:    98  out of    158    62%  
+   Number of unique control sets:         7
+
+IO Utilization: 
+ Number of IOs:                          21
+ Number of bonded IOBs:                  21  out of    210    10%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of    135     0%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk_100M                           | BUFGP                  | 108   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                     | Buffer(FF name)                                                                                                                                                  | Load  |
+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+DDS1/LU1/N1(DDS1/LU1/XST_GND:G)    | NONE(DDS1/LU1/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 2     |
+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.585ns (Maximum Frequency: 386.907MHz)
+   Minimum input arrival time before clock: 1.535ns
+   Maximum output required time after clock: 3.730ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk_100M'
+  Clock period: 2.585ns (frequency: 386.907MHz)
+  Total number of paths / destination ports: 2276 / 184
+-------------------------------------------------------------------------
+Delay:               2.585ns (Levels of Logic = 18)
+  Source:            DDS1/addra_10 (FF)
+  Destination:       DDS1/addra_10 (FF)
+  Source Clock:      Clk_100M rising
+  Destination Clock: Clk_100M rising
+
+  Data Path: DDS1/addra_10 to DDS1/addra_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.361   0.289  DDS1/addra_10 (DDS1/addra_10)
+     INV:I->O              1   0.113   0.000  DDS1/Mcompar_GND_10_o_addra[31]_LessThan_3_o_lut<0>1_INV_0 (DDS1/Mcompar_GND_10_o_addra[31]_LessThan_3_o_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  DDS1/Mcompar_GND_10_o_addra[31]_LessThan_3_o_cy<0> (DDS1/Mcompar_GND_10_o_addra[31]_LessThan_3_o_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  DDS1/Mcompar_GND_10_o_addra[31]_LessThan_3_o_cy<1> (DDS1/Mcompar_GND_10_o_addra[31]_LessThan_3_o_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  DDS1/Mcompar_GND_10_o_addra[31]_LessThan_3_o_cy<2> (DDS1/Mcompar_GND_10_o_addra[31]_LessThan_3_o_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  DDS1/Mcompar_GND_10_o_addra[31]_LessThan_3_o_cy<3> (DDS1/Mcompar_GND_10_o_addra[31]_LessThan_3_o_cy<3>)
+     MUXCY:CI->O          11   0.023   0.342  DDS1/Mcompar_GND_10_o_addra[31]_LessThan_3_o_cy<4> (DDS1/Mcompar_GND_10_o_addra[31]_LessThan_3_o_cy<4>)
+     LUT3:I2->O            1   0.097   0.000  DDS1/Maccum_addra_lut<0> (DDS1/Maccum_addra_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  DDS1/Maccum_addra_cy<0> (DDS1/Maccum_addra_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  DDS1/Maccum_addra_cy<1> (DDS1/Maccum_addra_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  DDS1/Maccum_addra_cy<2> (DDS1/Maccum_addra_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  DDS1/Maccum_addra_cy<3> (DDS1/Maccum_addra_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  DDS1/Maccum_addra_cy<4> (DDS1/Maccum_addra_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  DDS1/Maccum_addra_cy<5> (DDS1/Maccum_addra_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  DDS1/Maccum_addra_cy<6> (DDS1/Maccum_addra_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  DDS1/Maccum_addra_cy<7> (DDS1/Maccum_addra_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  DDS1/Maccum_addra_cy<8> (DDS1/Maccum_addra_cy<8>)
+     MUXCY:CI->O           0   0.023   0.000  DDS1/Maccum_addra_cy<9> (DDS1/Maccum_addra_cy<9>)
+     XORCY:CI->O           1   0.370   0.000  DDS1/Maccum_addra_xor<10> (DDS1/Result<10>)
+     FD:D                      0.008          DDS1/addra_10
+    ----------------------------------------
+    Total                      2.585ns (1.954ns logic, 0.631ns route)
+                                       (75.6% logic, 24.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_100M'
+  Total number of paths / destination ports: 30 / 30
+-------------------------------------------------------------------------
+Offset:              1.535ns (Levels of Logic = 2)
+  Source:            UART_Rx (PAD)
+  Destination:       Receive1/PRSCL_13 (FF)
+  Destination Clock: Clk_100M rising
+
+  Data Path: UART_Rx to Receive1/PRSCL_13
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            13   0.001   0.749  UART_Rx_IBUF (UART_Rx_IBUF)
+     LUT6:I0->O           14   0.097   0.339  Receive1/_n00894 (Receive1/_n0089)
+     FDRE:R                    0.349          Receive1/PRSCL_8
+    ----------------------------------------
+    Total                      1.535ns (0.447ns logic, 1.088ns route)
+                                       (29.1% logic, 70.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk_100M'
+  Total number of paths / destination ports: 152 / 12
+-------------------------------------------------------------------------
+Offset:              3.730ns (Levels of Logic = 6)
+  Source:            AUD1/PWMcount_2 (FF)
+  Destination:       SevenSegment<6> (PAD)
+  Source Clock:      Clk_100M rising
+
+  Data Path: AUD1/PWMcount_2 to SevenSegment<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               5   0.361   0.712  AUD1/PWMcount_2 (AUD1/PWMcount_2)
+     LUT6:I0->O            1   0.097   0.511  SS_Driver1/PWMcount[7]_PWM[7]_LessThan_10_o2 (SS_Driver1/PWMcount[7]_PWM[7]_LessThan_10_o1)
+     LUT3:I0->O            1   0.097   0.295  SS_Driver1/PWMcount[7]_PWM[7]_LessThan_10_o11 (SS_Driver1/PWMcount[7]_PWM[7]_LessThan_10_o11)
+     LUT5:I4->O            1   0.097   0.379  SS_Driver1/PWMcount[7]_PWM[7]_LessThan_10_o12 (SS_Driver1/PWMcount[7]_PWM[7]_LessThan_10_o2)
+     LUT6:I4->O            6   0.097   0.706  SS_Driver1/Mmux_SevenSegment221 (SS_Driver1/Mmux_SevenSegment22)
+     LUT5:I0->O            1   0.097   0.279  SS_Driver1/Mmux_SevenSegment71 (SevenSegment_6_OBUF)
+     OBUF:I->O                 0.000          SevenSegment_6_OBUF (SevenSegment<6>)
+    ----------------------------------------
+    Total                      3.730ns (0.846ns logic, 2.884ns route)
+                                       (22.7% logic, 77.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Clk_100M
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk_100M       |    2.585|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.33 secs
+ 
+--> 
+
+
+Total memory usage is 507576 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   60 (   0 filtered)
+Number of infos    :   15 (   0 filtered)
+

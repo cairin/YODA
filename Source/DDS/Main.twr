@@ -1,0 +1,558 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml Main.twx Main.ncd -o Main.twr Main.pcf -ucf Main.ucf
+
+Design file:              Main.ncd
+Physical constraint file: Main.pcf
+Device,package,speed:     xc7a100t,csg324,C,-3 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: NET "Clk_100M_BUFGP/IBUFG" PERIOD = 10 ns HIGH 5 ns;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 2302 paths analyzed, 507 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   3.369ns.
+--------------------------------------------------------------------------------
+
+Paths for end point Receive1/DATA_5 (SLICE_X76Y119.B2), 21 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     6.631ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Receive1/PRSCL_4 (FF)
+  Destination:          Receive1/DATA_5 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.363ns (Levels of Logic = 4)
+  Clock Path Skew:      0.029ns (0.626 - 0.597)
+  Source Clock:         Clk_100M_BUFGP rising at 0.000ns
+  Destination Clock:    Clk_100M_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Receive1/PRSCL_4 to Receive1/DATA_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X71Y126.AQ     Tcko                  0.341   Receive1/PRSCL<6>
+                                                       Receive1/PRSCL_4
+    SLICE_X70Y123.B2     net (fanout=4)        0.827   Receive1/PRSCL<4>
+    SLICE_X70Y123.B      Tilo                  0.097   Receive1/GND_12_o_GND_12_o_equal_11_o<15>1
+                                                       Receive1/GND_12_o_GND_12_o_equal_11_o<15>2
+    SLICE_X70Y123.A4     net (fanout=1)        0.315   Receive1/GND_12_o_GND_12_o_equal_11_o<15>1
+    SLICE_X70Y123.A      Tilo                  0.097   Receive1/GND_12_o_GND_12_o_equal_11_o<15>1
+                                                       Receive1/GND_12_o_GND_12_o_equal_11_o<15>3
+    SLICE_X77Y120.B2     net (fanout=15)       0.949   Receive1/GND_12_o_GND_12_o_equal_11_o
+    SLICE_X77Y120.B      Tilo                  0.097   Receive1/DATA<7>
+                                                       Receive1/_n01051
+    SLICE_X76Y119.B2     net (fanout=8)        0.615   Receive1/_n0105
+    SLICE_X76Y119.CLK    Tas                   0.025   Receive1/DATA<6>
+                                                       Receive1/DATA_5_rstpot
+                                                       Receive1/DATA_5
+    -------------------------------------------------  ---------------------------
+    Total                                      3.363ns (0.657ns logic, 2.706ns route)
+                                                       (19.5% logic, 80.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     6.681ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Receive1/PRSCL_6 (FF)
+  Destination:          Receive1/DATA_5 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.313ns (Levels of Logic = 4)
+  Clock Path Skew:      0.029ns (0.626 - 0.597)
+  Source Clock:         Clk_100M_BUFGP rising at 0.000ns
+  Destination Clock:    Clk_100M_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Receive1/PRSCL_6 to Receive1/DATA_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X71Y126.DQ     Tcko                  0.341   Receive1/PRSCL<6>
+                                                       Receive1/PRSCL_6
+    SLICE_X70Y123.B1     net (fanout=4)        0.777   Receive1/PRSCL<6>
+    SLICE_X70Y123.B      Tilo                  0.097   Receive1/GND_12_o_GND_12_o_equal_11_o<15>1
+                                                       Receive1/GND_12_o_GND_12_o_equal_11_o<15>2
+    SLICE_X70Y123.A4     net (fanout=1)        0.315   Receive1/GND_12_o_GND_12_o_equal_11_o<15>1
+    SLICE_X70Y123.A      Tilo                  0.097   Receive1/GND_12_o_GND_12_o_equal_11_o<15>1
+                                                       Receive1/GND_12_o_GND_12_o_equal_11_o<15>3
+    SLICE_X77Y120.B2     net (fanout=15)       0.949   Receive1/GND_12_o_GND_12_o_equal_11_o
+    SLICE_X77Y120.B      Tilo                  0.097   Receive1/DATA<7>
+                                                       Receive1/_n01051
+    SLICE_X76Y119.B2     net (fanout=8)        0.615   Receive1/_n0105
+    SLICE_X76Y119.CLK    Tas                   0.025   Receive1/DATA<6>
+                                                       Receive1/DATA_5_rstpot
+                                                       Receive1/DATA_5
+    -------------------------------------------------  ---------------------------
+    Total                                      3.313ns (0.657ns logic, 2.656ns route)
+                                                       (19.8% logic, 80.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     6.703ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Receive1/PRSCL_8 (FF)
+  Destination:          Receive1/DATA_5 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.291ns (Levels of Logic = 4)
+  Clock Path Skew:      0.029ns (0.626 - 0.597)
+  Source Clock:         Clk_100M_BUFGP rising at 0.000ns
+  Destination Clock:    Clk_100M_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Receive1/PRSCL_8 to Receive1/DATA_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X70Y126.AQ     Tcko                  0.393   Receive1/PRSCL<11>
+                                                       Receive1/PRSCL_8
+    SLICE_X68Y125.A2     net (fanout=3)        0.610   Receive1/PRSCL<8>
+    SLICE_X68Y125.A      Tilo                  0.097   Receive1/GND_12_o_GND_12_o_equal_11_o<15>
+                                                       Receive1/GND_12_o_GND_12_o_equal_11_o<15>1
+    SLICE_X70Y123.A5     net (fanout=1)        0.408   Receive1/GND_12_o_GND_12_o_equal_11_o<15>
+    SLICE_X70Y123.A      Tilo                  0.097   Receive1/GND_12_o_GND_12_o_equal_11_o<15>1
+                                                       Receive1/GND_12_o_GND_12_o_equal_11_o<15>3
+    SLICE_X77Y120.B2     net (fanout=15)       0.949   Receive1/GND_12_o_GND_12_o_equal_11_o
+    SLICE_X77Y120.B      Tilo                  0.097   Receive1/DATA<7>
+                                                       Receive1/_n01051
+    SLICE_X76Y119.B2     net (fanout=8)        0.615   Receive1/_n0105
+    SLICE_X76Y119.CLK    Tas                   0.025   Receive1/DATA<6>
+                                                       Receive1/DATA_5_rstpot
+                                                       Receive1/DATA_5
+    -------------------------------------------------  ---------------------------
+    Total                                      3.291ns (0.709ns logic, 2.582ns route)
+                                                       (21.5% logic, 78.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Receive1/DATA_4 (SLICE_X76Y119.A4), 21 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     6.799ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Receive1/PRSCL_4 (FF)
+  Destination:          Receive1/DATA_4 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.195ns (Levels of Logic = 4)
+  Clock Path Skew:      0.029ns (0.626 - 0.597)
+  Source Clock:         Clk_100M_BUFGP rising at 0.000ns
+  Destination Clock:    Clk_100M_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Receive1/PRSCL_4 to Receive1/DATA_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X71Y126.AQ     Tcko                  0.341   Receive1/PRSCL<6>
+                                                       Receive1/PRSCL_4
+    SLICE_X70Y123.B2     net (fanout=4)        0.827   Receive1/PRSCL<4>
+    SLICE_X70Y123.B      Tilo                  0.097   Receive1/GND_12_o_GND_12_o_equal_11_o<15>1
+                                                       Receive1/GND_12_o_GND_12_o_equal_11_o<15>2
+    SLICE_X70Y123.A4     net (fanout=1)        0.315   Receive1/GND_12_o_GND_12_o_equal_11_o<15>1
+    SLICE_X70Y123.A      Tilo                  0.097   Receive1/GND_12_o_GND_12_o_equal_11_o<15>1
+                                                       Receive1/GND_12_o_GND_12_o_equal_11_o<15>3
+    SLICE_X77Y120.B2     net (fanout=15)       0.949   Receive1/GND_12_o_GND_12_o_equal_11_o
+    SLICE_X77Y120.B      Tilo                  0.097   Receive1/DATA<7>
+                                                       Receive1/_n01051
+    SLICE_X76Y119.A4     net (fanout=8)        0.444   Receive1/_n0105
+    SLICE_X76Y119.CLK    Tas                   0.028   Receive1/DATA<6>
+                                                       Receive1/DATA_4_rstpot
+                                                       Receive1/DATA_4
+    -------------------------------------------------  ---------------------------
+    Total                                      3.195ns (0.660ns logic, 2.535ns route)
+                                                       (20.7% logic, 79.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     6.849ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Receive1/PRSCL_6 (FF)
+  Destination:          Receive1/DATA_4 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.145ns (Levels of Logic = 4)
+  Clock Path Skew:      0.029ns (0.626 - 0.597)
+  Source Clock:         Clk_100M_BUFGP rising at 0.000ns
+  Destination Clock:    Clk_100M_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Receive1/PRSCL_6 to Receive1/DATA_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X71Y126.DQ     Tcko                  0.341   Receive1/PRSCL<6>
+                                                       Receive1/PRSCL_6
+    SLICE_X70Y123.B1     net (fanout=4)        0.777   Receive1/PRSCL<6>
+    SLICE_X70Y123.B      Tilo                  0.097   Receive1/GND_12_o_GND_12_o_equal_11_o<15>1
+                                                       Receive1/GND_12_o_GND_12_o_equal_11_o<15>2
+    SLICE_X70Y123.A4     net (fanout=1)        0.315   Receive1/GND_12_o_GND_12_o_equal_11_o<15>1
+    SLICE_X70Y123.A      Tilo                  0.097   Receive1/GND_12_o_GND_12_o_equal_11_o<15>1
+                                                       Receive1/GND_12_o_GND_12_o_equal_11_o<15>3
+    SLICE_X77Y120.B2     net (fanout=15)       0.949   Receive1/GND_12_o_GND_12_o_equal_11_o
+    SLICE_X77Y120.B      Tilo                  0.097   Receive1/DATA<7>
+                                                       Receive1/_n01051
+    SLICE_X76Y119.A4     net (fanout=8)        0.444   Receive1/_n0105
+    SLICE_X76Y119.CLK    Tas                   0.028   Receive1/DATA<6>
+                                                       Receive1/DATA_4_rstpot
+                                                       Receive1/DATA_4
+    -------------------------------------------------  ---------------------------
+    Total                                      3.145ns (0.660ns logic, 2.485ns route)
+                                                       (21.0% logic, 79.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     6.871ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Receive1/PRSCL_8 (FF)
+  Destination:          Receive1/DATA_4 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.123ns (Levels of Logic = 4)
+  Clock Path Skew:      0.029ns (0.626 - 0.597)
+  Source Clock:         Clk_100M_BUFGP rising at 0.000ns
+  Destination Clock:    Clk_100M_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Receive1/PRSCL_8 to Receive1/DATA_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X70Y126.AQ     Tcko                  0.393   Receive1/PRSCL<11>
+                                                       Receive1/PRSCL_8
+    SLICE_X68Y125.A2     net (fanout=3)        0.610   Receive1/PRSCL<8>
+    SLICE_X68Y125.A      Tilo                  0.097   Receive1/GND_12_o_GND_12_o_equal_11_o<15>
+                                                       Receive1/GND_12_o_GND_12_o_equal_11_o<15>1
+    SLICE_X70Y123.A5     net (fanout=1)        0.408   Receive1/GND_12_o_GND_12_o_equal_11_o<15>
+    SLICE_X70Y123.A      Tilo                  0.097   Receive1/GND_12_o_GND_12_o_equal_11_o<15>1
+                                                       Receive1/GND_12_o_GND_12_o_equal_11_o<15>3
+    SLICE_X77Y120.B2     net (fanout=15)       0.949   Receive1/GND_12_o_GND_12_o_equal_11_o
+    SLICE_X77Y120.B      Tilo                  0.097   Receive1/DATA<7>
+                                                       Receive1/_n01051
+    SLICE_X76Y119.A4     net (fanout=8)        0.444   Receive1/_n0105
+    SLICE_X76Y119.CLK    Tas                   0.028   Receive1/DATA<6>
+                                                       Receive1/DATA_4_rstpot
+                                                       Receive1/DATA_4
+    -------------------------------------------------  ---------------------------
+    Total                                      3.123ns (0.712ns logic, 2.411ns route)
+                                                       (22.8% logic, 77.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Receive1/DATA_7 (SLICE_X77Y120.A4), 21 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     6.887ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Receive1/PRSCL_4 (FF)
+  Destination:          Receive1/DATA_7 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.106ns (Levels of Logic = 4)
+  Clock Path Skew:      0.028ns (0.625 - 0.597)
+  Source Clock:         Clk_100M_BUFGP rising at 0.000ns
+  Destination Clock:    Clk_100M_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Receive1/PRSCL_4 to Receive1/DATA_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X71Y126.AQ     Tcko                  0.341   Receive1/PRSCL<6>
+                                                       Receive1/PRSCL_4
+    SLICE_X70Y123.B2     net (fanout=4)        0.827   Receive1/PRSCL<4>
+    SLICE_X70Y123.B      Tilo                  0.097   Receive1/GND_12_o_GND_12_o_equal_11_o<15>1
+                                                       Receive1/GND_12_o_GND_12_o_equal_11_o<15>2
+    SLICE_X70Y123.A4     net (fanout=1)        0.315   Receive1/GND_12_o_GND_12_o_equal_11_o<15>1
+    SLICE_X70Y123.A      Tilo                  0.097   Receive1/GND_12_o_GND_12_o_equal_11_o<15>1
+                                                       Receive1/GND_12_o_GND_12_o_equal_11_o<15>3
+    SLICE_X77Y120.B2     net (fanout=15)       0.949   Receive1/GND_12_o_GND_12_o_equal_11_o
+    SLICE_X77Y120.B      Tilo                  0.097   Receive1/DATA<7>
+                                                       Receive1/_n01051
+    SLICE_X77Y120.A4     net (fanout=8)        0.316   Receive1/_n0105
+    SLICE_X77Y120.CLK    Tas                   0.067   Receive1/DATA<7>
+                                                       Receive1/DATA_7_rstpot
+                                                       Receive1/DATA_7
+    -------------------------------------------------  ---------------------------
+    Total                                      3.106ns (0.699ns logic, 2.407ns route)
+                                                       (22.5% logic, 77.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     6.937ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Receive1/PRSCL_6 (FF)
+  Destination:          Receive1/DATA_7 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.056ns (Levels of Logic = 4)
+  Clock Path Skew:      0.028ns (0.625 - 0.597)
+  Source Clock:         Clk_100M_BUFGP rising at 0.000ns
+  Destination Clock:    Clk_100M_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Receive1/PRSCL_6 to Receive1/DATA_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X71Y126.DQ     Tcko                  0.341   Receive1/PRSCL<6>
+                                                       Receive1/PRSCL_6
+    SLICE_X70Y123.B1     net (fanout=4)        0.777   Receive1/PRSCL<6>
+    SLICE_X70Y123.B      Tilo                  0.097   Receive1/GND_12_o_GND_12_o_equal_11_o<15>1
+                                                       Receive1/GND_12_o_GND_12_o_equal_11_o<15>2
+    SLICE_X70Y123.A4     net (fanout=1)        0.315   Receive1/GND_12_o_GND_12_o_equal_11_o<15>1
+    SLICE_X70Y123.A      Tilo                  0.097   Receive1/GND_12_o_GND_12_o_equal_11_o<15>1
+                                                       Receive1/GND_12_o_GND_12_o_equal_11_o<15>3
+    SLICE_X77Y120.B2     net (fanout=15)       0.949   Receive1/GND_12_o_GND_12_o_equal_11_o
+    SLICE_X77Y120.B      Tilo                  0.097   Receive1/DATA<7>
+                                                       Receive1/_n01051
+    SLICE_X77Y120.A4     net (fanout=8)        0.316   Receive1/_n0105
+    SLICE_X77Y120.CLK    Tas                   0.067   Receive1/DATA<7>
+                                                       Receive1/DATA_7_rstpot
+                                                       Receive1/DATA_7
+    -------------------------------------------------  ---------------------------
+    Total                                      3.056ns (0.699ns logic, 2.357ns route)
+                                                       (22.9% logic, 77.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     6.959ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Receive1/PRSCL_8 (FF)
+  Destination:          Receive1/DATA_7 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      3.034ns (Levels of Logic = 4)
+  Clock Path Skew:      0.028ns (0.625 - 0.597)
+  Source Clock:         Clk_100M_BUFGP rising at 0.000ns
+  Destination Clock:    Clk_100M_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Receive1/PRSCL_8 to Receive1/DATA_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X70Y126.AQ     Tcko                  0.393   Receive1/PRSCL<11>
+                                                       Receive1/PRSCL_8
+    SLICE_X68Y125.A2     net (fanout=3)        0.610   Receive1/PRSCL<8>
+    SLICE_X68Y125.A      Tilo                  0.097   Receive1/GND_12_o_GND_12_o_equal_11_o<15>
+                                                       Receive1/GND_12_o_GND_12_o_equal_11_o<15>1
+    SLICE_X70Y123.A5     net (fanout=1)        0.408   Receive1/GND_12_o_GND_12_o_equal_11_o<15>
+    SLICE_X70Y123.A      Tilo                  0.097   Receive1/GND_12_o_GND_12_o_equal_11_o<15>1
+                                                       Receive1/GND_12_o_GND_12_o_equal_11_o<15>3
+    SLICE_X77Y120.B2     net (fanout=15)       0.949   Receive1/GND_12_o_GND_12_o_equal_11_o
+    SLICE_X77Y120.B      Tilo                  0.097   Receive1/DATA<7>
+                                                       Receive1/_n01051
+    SLICE_X77Y120.A4     net (fanout=8)        0.316   Receive1/_n0105
+    SLICE_X77Y120.CLK    Tas                   0.067   Receive1/DATA<7>
+                                                       Receive1/DATA_7_rstpot
+                                                       Receive1/DATA_7
+    -------------------------------------------------  ---------------------------
+    Total                                      3.034ns (0.751ns logic, 2.283ns route)
+                                                       (24.8% logic, 75.2% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: NET "Clk_100M_BUFGP/IBUFG" PERIOD = 10 ns HIGH 5 ns;
+--------------------------------------------------------------------------------
+
+Paths for end point DDS1/LU1/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram (RAMB36_X2Y21.ADDRARDADDRU5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.170ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               DDS1/addra_2 (FF)
+  Destination:          DDS1/LU1/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.272ns (Levels of Logic = 0)
+  Clock Path Skew:      0.102ns (0.375 - 0.273)
+  Source Clock:         Clk_100M_BUFGP rising at 10.000ns
+  Destination Clock:    Clk_100M_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: DDS1/addra_2 to DDS1/LU1/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram
+    Location                   Delay type         Delay(ns)  Physical Resource
+                                                             Logical Resource(s)
+    -------------------------------------------------------  -------------------
+    SLICE_X71Y110.AQ           Tcko                  0.141   DDS1/addra<5>
+                                                             DDS1/addra_2
+    RAMB36_X2Y21.ADDRARDADDRU5 net (fanout=4)        0.314   DDS1/addra<2>
+    RAMB36_X2Y21.CLKARDCLKU    Trckc_ADDRA (-Th)     0.183   DDS1/LU1/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram
+                                                             DDS1/LU1/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram
+    -------------------------------------------------------  ---------------------------
+    Total                                            0.272ns (-0.042ns logic, 0.314ns route)
+                                                             (-15.4% logic, 115.4% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point DDS1/LU1/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram (RAMB36_X2Y21.ADDRARDADDRL5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.172ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               DDS1/addra_2 (FF)
+  Destination:          DDS1/LU1/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.274ns (Levels of Logic = 0)
+  Clock Path Skew:      0.102ns (0.375 - 0.273)
+  Source Clock:         Clk_100M_BUFGP rising at 10.000ns
+  Destination Clock:    Clk_100M_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: DDS1/addra_2 to DDS1/LU1/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram
+    Location                   Delay type         Delay(ns)  Physical Resource
+                                                             Logical Resource(s)
+    -------------------------------------------------------  -------------------
+    SLICE_X71Y110.AQ           Tcko                  0.141   DDS1/addra<5>
+                                                             DDS1/addra_2
+    RAMB36_X2Y21.ADDRARDADDRL5 net (fanout=4)        0.316   DDS1/addra<2>
+    RAMB36_X2Y21.CLKARDCLKL    Trckc_ADDRA (-Th)     0.183   DDS1/LU1/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram
+                                                             DDS1/LU1/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram
+    -------------------------------------------------------  ---------------------------
+    Total                                            0.274ns (-0.042ns logic, 0.316ns route)
+                                                             (-15.3% logic, 115.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Receive1/DATA_5 (SLICE_X76Y119.B6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.189ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Receive1/DATAFLL_6 (FF)
+  Destination:          Receive1/DATA_5 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.203ns (Levels of Logic = 1)
+  Clock Path Skew:      0.014ns (0.076 - 0.062)
+  Source Clock:         Clk_100M_BUFGP rising at 10.000ns
+  Destination Clock:    Clk_100M_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: Receive1/DATAFLL_6 to Receive1/DATA_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X76Y120.CQ     Tcko                  0.164   Receive1/DATAFLL<7>
+                                                       Receive1/DATAFLL_6
+    SLICE_X76Y119.B6     net (fanout=2)        0.115   Receive1/DATAFLL<6>
+    SLICE_X76Y119.CLK    Tah         (-Th)     0.076   Receive1/DATA<6>
+                                                       Receive1/DATA_5_rstpot
+                                                       Receive1/DATA_5
+    -------------------------------------------------  ---------------------------
+    Total                                      0.203ns (0.088ns logic, 0.115ns route)
+                                                       (43.3% logic, 56.7% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "Clk_100M_BUFGP/IBUFG" PERIOD = 10 ns HIGH 5 ns;
+--------------------------------------------------------------------------------
+Slack: 8.038ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.962ns (509.684MHz) (Trper_CLKA)
+  Physical resource: DDS1/LU1/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLKL
+  Logical resource: DDS1/LU1/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLKL
+  Location pin: RAMB36_X2Y21.CLKARDCLKL
+  Clock network: Clk_100M_BUFGP
+--------------------------------------------------------------------------------
+Slack: 8.038ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.962ns (509.684MHz) (Trper_CLKA)
+  Physical resource: DDS1/LU1/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLKU
+  Logical resource: DDS1/LU1/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLKU
+  Location pin: RAMB36_X2Y21.CLKARDCLKU
+  Clock network: Clk_100M_BUFGP
+--------------------------------------------------------------------------------
+Slack: 8.038ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.962ns (509.684MHz) (Trper_CLKB)
+  Physical resource: DDS1/LU1/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKBWRCLKL
+  Logical resource: DDS1/LU1/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKBWRCLKL
+  Location pin: RAMB36_X2Y21.CLKBWRCLKL
+  Clock network: Clk_100M_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock Clk_100M
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clk_100M       |    3.369|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 2302 paths, 0 nets, and 502 connections
+
+Design statistics:
+   Minimum period:   3.369ns{1}   (Maximum frequency: 296.824MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Wed Apr 20 16:46:45 2016 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 774 MB
+
+
+
