@@ -2,12 +2,12 @@ import time
 import serial
 
 # configure the serial connections (the parameters differs on the device you are connecting to)
-#ser = serial.Serial(
-#    port='/dev/ttyUSB1',
-#    baudrate=10000
-#)
+ser = serial.Serial(
+    port='/dev/ttyUSB1',
+   baudrate=10000
+)
 
-#ser.isOpen()
+ser.isOpen()
 
 print('Welcome to The Fourier Awakens CLI')
 print('Enter your commands below.\nInsert "exit" to leave the application.')
@@ -20,12 +20,11 @@ while 1:
     # get keyboard input
     command = input(">> ")
     if command == 'exit':
-        #ser.close()
+        ser.close()
         break
     else:
         # send the character to the device
-        # (note that I happend a \r\n carriage return and line feed to the characters - this is requested by my device)
-        #ser.write(input)
+        ser.write(command)
         print(command)
 
         #For receiving stuff.
