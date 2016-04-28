@@ -10,7 +10,7 @@
 #### Hand-ins
 
 - [x] Part 1: Feature List
-- [ ] Part 2: Conceptual Design
+- [x] Part 2: Conceptual Design
 - [ ] Part 3: Final Paper
 - [ ] Part 4: Conference Presentation
 
