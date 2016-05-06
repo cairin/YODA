@@ -101,3 +101,21 @@ Section IV-D:
 Section V:
 - Change "outputted" to "output"
 
+
+----------
+Reviewer 1
+----------
+
+- Figure 3 is too small to read comfortably
+- Could have had more detail in the Detailed Design section
+- Good comparison of different architectures
+- Could have been more imaginative in conceptual design
+
+Reviewer 2
+----------
+
+- Fig 3 could be enlarged
+- Information presented well.
+
+
+
