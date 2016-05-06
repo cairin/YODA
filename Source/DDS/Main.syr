@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: Main.prj
@@ -111,8 +111,8 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/bluelabuser/Desktop/DDS/ipcore_dir/BROM_Sin.v" into library work
-Parsing module <BROM_Sin>.
+Analyzing Verilog file "/home/bluelabuser/Desktop/DDS/blk_mem_gen_v7_3.v" into library work
+Parsing module <blk_mem_gen_v7_3>.
 Analyzing Verilog file "/home/bluelabuser/Desktop/DDS/BCD_Decoder.v" into library work
 Parsing module <BCD_Decoder>.
 Analyzing Verilog file "/home/bluelabuser/Desktop/DDS/SS_Driver.v" into library work
@@ -139,20 +139,35 @@ Elaborating module <Delay_Reset>.
 Elaborating module <SS_Driver>.
 
 Elaborating module <BCD_Decoder>.
-WARNING:HDLCompiler:189 - "/home/bluelabuser/Desktop/DDS/Main.v" Line 26: Size mismatch in connection of port <BCD3>. Formal port size is 4-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/bluelabuser/Desktop/DDS/Main.v" Line 27: Size mismatch in connection of port <SegmentDrivers>. Formal port size is 4-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:189 - "/home/bluelabuser/Desktop/DDS/Main.v" Line 32: Size mismatch in connection of port <PWM>. Formal port size is 8-bit while actual signal size is 11-bit.
+WARNING:HDLCompiler:189 - "/home/bluelabuser/Desktop/DDS/Main.v" Line 33: Size mismatch in connection of port <SegmentDrivers>. Formal port size is 4-bit while actual signal size is 8-bit.
 
 Elaborating module <AUD>.
 
 Elaborating module <DDS>.
 
-Elaborating module <BROM_Sin>.
-WARNING:HDLCompiler:1499 - "/home/bluelabuser/Desktop/DDS/ipcore_dir/BROM_Sin.v" Line 39: Empty module <BROM_Sin> remains a black box.
-WARNING:HDLCompiler:413 - "/home/bluelabuser/Desktop/DDS/DDS.v" Line 18: Result of 32-bit expression is truncated to fit in 8-bit target.
+Elaborating module <blk_mem_gen_v7_3>.
+WARNING:HDLCompiler:1499 - "/home/bluelabuser/Desktop/DDS/blk_mem_gen_v7_3.v" Line 39: Empty module <blk_mem_gen_v7_3> remains a black box.
+WARNING:HDLCompiler:1127 - "/home/bluelabuser/Desktop/DDS/DDS.v" Line 18: Assignment to doutB ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/bluelabuser/Desktop/DDS/DDS.v" Line 25: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/bluelabuser/Desktop/DDS/DDS.v" Line 26: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/bluelabuser/Desktop/DDS/DDS.v" Line 31: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "/home/bluelabuser/Desktop/DDS/DDS.v" Line 32: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/bluelabuser/Desktop/DDS/DDS.v" Line 33: Result of 32-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "/home/bluelabuser/Desktop/DDS/DDS.v" Line 40: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "/home/bluelabuser/Desktop/DDS/DDS.v" Line 42: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:189 - "/home/bluelabuser/Desktop/DDS/Main.v" Line 42: Size mismatch in connection of port <a>. Formal port size is 17-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/bluelabuser/Desktop/DDS/Main.v" Line 47: Size mismatch in connection of port <a>. Formal port size is 17-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/bluelabuser/Desktop/DDS/Main.v" Line 51: Size mismatch in connection of port <a>. Formal port size is 17-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/bluelabuser/Desktop/DDS/Main.v" Line 55: Size mismatch in connection of port <a>. Formal port size is 17-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/bluelabuser/Desktop/DDS/Main.v" Line 59: Size mismatch in connection of port <a>. Formal port size is 17-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/bluelabuser/Desktop/DDS/Main.v" Line 63: Size mismatch in connection of port <a>. Formal port size is 17-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/bluelabuser/Desktop/DDS/Main.v" Line 67: Size mismatch in connection of port <a>. Formal port size is 17-bit while actual signal size is 32-bit.
 
 Elaborating module <Receive>.
 WARNING:HDLCompiler:413 - "/home/bluelabuser/Desktop/DDS/Receive.v" Line 26: Result of 17-bit expression is truncated to fit in 16-bit target.
 WARNING:HDLCompiler:413 - "/home/bluelabuser/Desktop/DDS/Receive.v" Line 32: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:1127 - "/home/bluelabuser/Desktop/DDS/Main.v" Line 113: Assignment to AdrS ignored, since the identifier is never used
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -161,12 +176,26 @@ WARNING:HDLCompiler:413 - "/home/bluelabuser/Desktop/DDS/Receive.v" Line 32: Res
 Synthesizing Unit <Main>.
     Related source file is "/home/bluelabuser/Desktop/DDS/Main.v".
 WARNING:Xst:2935 - Signal 'AUD_SD', unconnected in block 'Main', is tied to its initial value (1).
-    Found 1-bit register for signal <busyState>.
     Found 32-bit register for signal <M>.
-    Found 8x32-bit Read Only RAM for signal <_n0047>
+    Found 1-bit register for signal <busyState>.
+    Found 1-bit register for signal <reset>.
+    Found 11-bit adder for signal <n0116> created at line 116.
+    Found 11-bit adder for signal <n0119> created at line 116.
+    Found 11-bit adder for signal <n0122> created at line 116.
+    Found 11-bit adder for signal <n0125> created at line 116.
+    Found 11-bit adder for signal <n0128> created at line 116.
+    Found 11-bit adder for signal <PWM> created at line 116.
+    Found 32-bit adder for signal <n0089> created at line 50.
+    Found 32-bit adder for signal <n0083> created at line 46.
+    Found 32-bit adder for signal <n0101> created at line 58.
+    Found 32-bit adder for signal <n0095> created at line 54.
+    Found 32-bit adder for signal <n0107> created at line 62.
+    Found 32-bit adder for signal <M[31]_M[31]_add_41_OUT> created at line 66.
+    Found 16x32-bit Read Only RAM for signal <_n0163>
     Summary:
 	inferred   1 RAM(s).
-	inferred  33 D-type flip-flop(s).
+	inferred  12 Adder/Subtractor(s).
+	inferred  34 D-type flip-flop(s).
 Unit <Main> synthesized.
 
 Synthesizing Unit <Delay_Reset>.
@@ -205,28 +234,33 @@ Unit <BCD_Decoder> synthesized.
 Synthesizing Unit <AUD>.
     Related source file is "/home/bluelabuser/Desktop/DDS/AUD.v".
     Found 1-bit register for signal <AUD_out>.
-    Found 8-bit register for signal <PWMcount>.
-    Found 8-bit adder for signal <PWMcount[7]_GND_9_o_add_1_OUT> created at line 9.
-    Found 8-bit comparator greater for signal <PWM[7]_PWMcount[7]_LessThan_3_o> created at line 10
+    Found 11-bit register for signal <PWMcount>.
+    Found 11-bit adder for signal <PWMcount[10]_GND_9_o_add_1_OUT> created at line 9.
+    Found 11-bit comparator greater for signal <PWM[10]_PWMcount[10]_LessThan_3_o> created at line 10
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred   9 D-type flip-flop(s).
+	inferred  12 D-type flip-flop(s).
 	inferred   1 Comparator(s).
 Unit <AUD> synthesized.
 
 Synthesizing Unit <DDS>.
     Related source file is "/home/bluelabuser/Desktop/DDS/DDS.v".
-WARNING:Xst:647 - Input <Start> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 32-bit register for signal <addra>.
-    Found 8-bit register for signal <PWM>.
-    Found 32-bit subtractor for signal <addra[31]_GND_10_o_sub_4_OUT> created at line 21.
-    Found 32-bit adder for signal <addra[31]_M[31]_add_1_OUT> created at line 19.
-    Found 32-bit comparator greater for signal <GND_10_o_addra[31]_LessThan_3_o> created at line 20
+WARNING:Xst:647 - Input <b> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/bluelabuser/Desktop/DDS/DDS.v" line 17: Output port <doutb> of the instance <LU1> is unconnected or connected to loadless signal.
+    Found 12-bit register for signal <addrB>.
+    Found 10-bit register for signal <PWM>.
+    Found 7-bit register for signal <counter>.
+    Found 12-bit register for signal <addrA>.
+    Found 32-bit adder for signal <n0027> created at line 26.
+    Found 32-bit adder for signal <n0029> created at line 32.
+    Found 32-bit adder for signal <n0030> created at line 33.
+    Found 7-bit adder for signal <counter[6]_GND_10_o_add_7_OUT> created at line 42.
+    Found 17x10-bit multiplier for signal <n0028> created at line 31.
     Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred  40 D-type flip-flop(s).
-	inferred   1 Comparator(s).
-	inferred   1 Multiplexer(s).
+	inferred   1 Multiplier(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred  41 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
 Unit <DDS> synthesized.
 
 Synthesizing Unit <Receive>.
@@ -237,10 +271,10 @@ Synthesizing Unit <Receive>.
     Found 10-bit register for signal <DATAFLL>.
     Found 8-bit register for signal <DATA>.
     Found 4-bit register for signal <INDEX>.
-    Found 16-bit adder for signal <PRSCL[15]_GND_12_o_add_8_OUT> created at line 26.
-    Found 4-bit adder for signal <INDEX[3]_GND_12_o_add_12_OUT> created at line 32.
-    Found 16-bit comparator lessequal for signal <PRSCL[15]_GND_12_o_LessThan_8_o> created at line 25
-    Found 4-bit comparator greater for signal <INDEX[3]_PWR_9_o_LessThan_12_o> created at line 31
+    Found 16-bit adder for signal <PRSCL[15]_GND_13_o_add_8_OUT> created at line 26.
+    Found 4-bit adder for signal <INDEX[3]_GND_13_o_add_12_OUT> created at line 32.
+    Found 16-bit comparator lessequal for signal <PRSCL[15]_GND_13_o_LessThan_8_o> created at line 25
+    Found 4-bit comparator greater for signal <INDEX[3]_PWR_8_o_LessThan_12_o> created at line 31
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  40 D-type flip-flop(s).
@@ -253,44 +287,50 @@ HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 5
+ 16x32-bit single-port Read Only RAM                   : 1
  16x7-bit single-port Read Only RAM                    : 4
- 8x32-bit single-port Read Only RAM                    : 1
-# Adders/Subtractors                                   : 7
+# Multipliers                                          : 7
+ 17x10-bit multiplier                                  : 7
+# Adders/Subtractors                                   : 46
+ 11-bit adder                                          : 7
  16-bit adder                                          : 1
  17-bit adder                                          : 1
  23-bit adder                                          : 1
- 32-bit addsub                                         : 1
+ 32-bit adder                                          : 27
  4-bit adder                                           : 1
- 8-bit adder                                           : 2
-# Registers                                            : 18
- 1-bit register                                        : 6
- 10-bit register                                       : 1
+ 7-bit adder                                           : 7
+ 8-bit adder                                           : 1
+# Registers                                            : 45
+ 1-bit register                                        : 7
+ 10-bit register                                       : 8
+ 11-bit register                                       : 1
+ 12-bit register                                       : 14
  16-bit register                                       : 1
  17-bit register                                       : 1
  23-bit register                                       : 1
- 32-bit register                                       : 2
+ 32-bit register                                       : 1
  4-bit register                                        : 2
- 8-bit register                                        : 4
-# Comparators                                          : 5
+ 7-bit register                                        : 7
+ 8-bit register                                        : 2
+# Comparators                                          : 4
+ 11-bit comparator greater                             : 1
  16-bit comparator lessequal                           : 1
- 32-bit comparator greater                             : 1
  4-bit comparator greater                              : 1
- 8-bit comparator greater                              : 2
-# Multiplexers                                         : 16
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 29
  1-bit 2-to-1 multiplexer                              : 10
- 32-bit 2-to-1 multiplexer                             : 1
+ 12-bit 2-to-1 multiplexer                             : 14
  4-bit 2-to-1 multiplexer                              : 3
  8-bit 2-to-1 multiplexer                              : 2
 
 =========================================================================
-INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
 
 =========================================================================
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-Reading core <ipcore_dir/BROM_Sin.ngc>.
-Loading core <BROM_Sin> for timing and area information for instance <LU1>.
+Reading core <blk_mem_gen_v7_3.ngc>.
+Loading core <blk_mem_gen_v7_3> for timing and area information for instance <LU1>.
 INFO:Xst:2261 - The FF/Latch <BUSY> in Unit <Receive1> is equivalent to the following FF/Latch, which will be removed : <RX_FLG> 
 
 Synthesizing (advanced) Unit <AUD>.
@@ -312,7 +352,9 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_SevenSegment> will be implemented on
 Unit <BCD_Decoder> synthesized (advanced).
 
 Synthesizing (advanced) Unit <DDS>.
-The following registers are absorbed into accumulator <addra>: 1 register on signal <addra>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+The following registers are absorbed into accumulator <addrA>: 1 register on signal <addrA>.
+The following registers are absorbed into accumulator <addrB>: 1 register on signal <addrB>.
 Unit <DDS> synthesized (advanced).
 
 Synthesizing (advanced) Unit <Delay_Reset>.
@@ -320,18 +362,20 @@ The following registers are absorbed into counter <Count>: 1 register on signal 
 Unit <Delay_Reset> synthesized (advanced).
 
 Synthesizing (advanced) Unit <Main>.
-INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <DATA> prevents it from being combined with the RAM <Mram__n0047> for implementation as read-only block RAM.
+	The following adders/subtractors are grouped into adder tree <Madd_PWM1> :
+ 	<Madd_n0116> in block <Main>, 	<Madd_n0119> in block <Main>, 	<Madd_n0122> in block <Main>, 	<Madd_n0125> in block <Main>, 	<Madd_n0128> in block <Main>, 	<Madd_PWM> in block <Main>.
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <DATA> prevents it from being combined with the RAM <Mram__n0163> for implementation as read-only block RAM.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 8-word x 32-bit                     |          |
+    |     aspect ratio   | 16-word x 32-bit                    |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <dataR<2:0>>    |          |
+    |     addrA          | connected to signal <dataR<3:0>>    |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3231 - The small RAM <Mram__n0047> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+INFO:Xst:3231 - The small RAM <Mram__n0163> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
 Unit <Main> synthesized (advanced).
 
 Synthesizing (advanced) Unit <Receive>.
@@ -348,27 +392,33 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 5
+ 16x32-bit single-port distributed Read Only RAM       : 1
  16x7-bit single-port distributed Read Only RAM        : 4
- 8x32-bit single-port distributed Read Only RAM        : 1
-# Adders/Subtractors                                   : 1
+# Multipliers                                          : 7
+ 17x10-bit multiplier                                  : 7
+# Adders/Subtractors                                   : 20
+ 11-bit adder                                          : 6
+ 12-bit adder                                          : 7
+ 32-bit adder                                          : 6
  4-bit adder                                           : 1
-# Counters                                             : 5
+# Counters                                             : 12
+ 11-bit up counter                                     : 1
  16-bit up counter                                     : 1
  17-bit up counter                                     : 1
  23-bit up counter                                     : 1
- 8-bit up counter                                      : 2
-# Accumulators                                         : 1
- 32-bit updown accumulator                             : 1
-# Registers                                            : 72
- Flip-Flops                                            : 72
-# Comparators                                          : 5
+ 7-bit up counter                                      : 7
+ 8-bit up counter                                      : 1
+# Accumulators                                         : 14
+ 12-bit up loadable accumulator                        : 14
+# Registers                                            : 135
+ Flip-Flops                                            : 135
+# Comparators                                          : 4
+ 11-bit comparator greater                             : 1
  16-bit comparator lessequal                           : 1
- 32-bit comparator greater                             : 1
  4-bit comparator greater                              : 1
- 8-bit comparator greater                              : 2
-# Multiplexers                                         : 16
+ 8-bit comparator greater                              : 1
+# Multiplexers                                         : 15
  1-bit 2-to-1 multiplexer                              : 10
- 32-bit 2-to-1 multiplexer                             : 1
  4-bit 2-to-1 multiplexer                              : 3
  8-bit 2-to-1 multiplexer                              : 2
 
@@ -378,6 +428,7 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 INFO:Xst:2261 - The FF/Latch <BUSY> in Unit <Receive> is equivalent to the following FF/Latch, which will be removed : <RX_FLG> 
+INFO:Xst:2146 - In block <Main>, Counter <DDS7/counter> <DDS6/counter> <DDS5/counter> <DDS4/counter> <DDS3/counter> <DDS2/counter> <DDS1/counter> are equivalent, XST will keep only <DDS7/counter>.
 INFO:Xst:2146 - In block <SS_Driver>, Counter <Count> <PWMcount> are equivalent, XST will keep only <Count>.
 WARNING:Xst:1293 - FF/Latch <M_31> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_30> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
@@ -407,50 +458,98 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_7> has a constant
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_6> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_5> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_4> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <M_3> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <DDS2/PWM_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS2/PWM_9> 
+INFO:Xst:2261 - The FF/Latch <DDS3/PWM_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS3/PWM_9> 
+INFO:Xst:2261 - The FF/Latch <DDS4/PWM_7> in Unit <Main> is equivalent to the following 2 FFs/Latches, which will be removed : <DDS4/PWM_8> <DDS4/PWM_9> 
+INFO:Xst:2261 - The FF/Latch <DDS5/PWM_7> in Unit <Main> is equivalent to the following 2 FFs/Latches, which will be removed : <DDS5/PWM_8> <DDS5/PWM_9> 
+INFO:Xst:2261 - The FF/Latch <DDS6/PWM_6> in Unit <Main> is equivalent to the following 3 FFs/Latches, which will be removed : <DDS6/PWM_7> <DDS6/PWM_8> <DDS6/PWM_9> 
+INFO:Xst:2261 - The FF/Latch <DDS7/PWM_6> in Unit <Main> is equivalent to the following 3 FFs/Latches, which will be removed : <DDS7/PWM_7> <DDS7/PWM_8> <DDS7/PWM_9> 
 
 Optimizing unit <Main> ...
 
 Optimizing unit <SS_Driver> ...
 
-Optimizing unit <DDS> ...
-
 Optimizing unit <Receive> ...
-WARNING:Xst:1293 - FF/Latch <Receive1/PRSCL_14> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Receive1/PRSCL_15> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_11> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_12> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_13> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_14> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_15> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_16> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_17> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_18> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_19> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_20> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_21> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_22> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_23> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_24> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_25> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_26> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_27> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_28> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_29> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_30> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <DDS1/addra_31> (without init value) has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <Receive1/PRSCL_15> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Receive1/PRSCL_14> has a constant value of 0 in block <Main>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <AUD1/PWMcount_4> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <SS_Driver1/Count_4> 
 INFO:Xst:2261 - The FF/Latch <AUD1/PWMcount_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <SS_Driver1/Count_5> 
 INFO:Xst:2261 - The FF/Latch <AUD1/PWMcount_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <SS_Driver1/Count_6> 
 INFO:Xst:2261 - The FF/Latch <AUD1/PWMcount_7> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <SS_Driver1/Count_7> 
+INFO:Xst:2261 - The FF/Latch <AUD1/PWMcount_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <SS_Driver1/Count_8> 
+INFO:Xst:2261 - The FF/Latch <AUD1/PWMcount_9> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <SS_Driver1/Count_9> 
+INFO:Xst:2261 - The FF/Latch <AUD1/PWMcount_10> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <SS_Driver1/Count_10> 
+INFO:Xst:2261 - The FF/Latch <DDS7/addrB_3> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS7/addrA_3> 
+INFO:Xst:2261 - The FF/Latch <DDS7/addrB_4> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS7/addrA_4> 
+INFO:Xst:2261 - The FF/Latch <DDS7/addrB_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS7/addrA_5> 
+INFO:Xst:2261 - The FF/Latch <DDS7/addrB_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS7/addrA_6> 
+INFO:Xst:2261 - The FF/Latch <DDS7/addrB_7> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS7/addrA_7> 
+INFO:Xst:2261 - The FF/Latch <DDS7/addrB_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS7/addrA_8> 
+INFO:Xst:2261 - The FF/Latch <DDS7/addrB_9> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS7/addrA_9> 
+INFO:Xst:2261 - The FF/Latch <DDS6/addrB_3> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS6/addrA_3> 
+INFO:Xst:2261 - The FF/Latch <DDS2/addrA_1> in Unit <Main> is equivalent to the following 5 FFs/Latches, which will be removed : <DDS2/addrB_1> <DDS4/addrB_1> <DDS4/addrA_1> <DDS6/addrB_1> <DDS6/addrA_1> 
+INFO:Xst:2261 - The FF/Latch <DDS6/addrB_4> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS6/addrA_4> 
+INFO:Xst:2261 - The FF/Latch <DDS2/addrA_2> in Unit <Main> is equivalent to the following 3 FFs/Latches, which will be removed : <DDS2/addrB_2> <DDS6/addrB_2> <DDS6/addrA_2> 
+INFO:Xst:2261 - The FF/Latch <DDS6/addrB_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS6/addrA_5> 
+INFO:Xst:2261 - The FF/Latch <DDS2/addrA_3> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS2/addrB_3> 
+INFO:Xst:2261 - The FF/Latch <DDS6/addrB_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS6/addrA_6> 
+INFO:Xst:2261 - The FF/Latch <DDS2/addrA_4> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS2/addrB_4> 
+INFO:Xst:2261 - The FF/Latch <DDS6/addrB_7> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS6/addrA_7> 
+INFO:Xst:2261 - The FF/Latch <DDS2/addrA_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS2/addrB_5> 
+INFO:Xst:2261 - The FF/Latch <DDS6/addrB_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS6/addrA_8> 
+INFO:Xst:2261 - The FF/Latch <DDS2/addrA_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS2/addrB_6> 
+INFO:Xst:2261 - The FF/Latch <DDS6/addrB_9> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS6/addrA_9> 
+INFO:Xst:2261 - The FF/Latch <DDS1/addrA_0> in Unit <Main> is equivalent to the following 13 FFs/Latches, which will be removed : <DDS2/addrA_0> <DDS2/addrB_0> <DDS1/addrB_0> <DDS3/addrB_0> <DDS3/addrA_0> <DDS4/addrB_0> <DDS4/addrA_0> <DDS5/addrB_0> <DDS5/addrA_0> <DDS6/addrB_0> <DDS6/addrA_0> <DDS7/addrB_0> <DDS7/addrA_0> 
+INFO:Xst:2261 - The FF/Latch <DDS5/addrB_3> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS5/addrA_3> 
+INFO:Xst:2261 - The FF/Latch <DDS2/addrA_7> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS2/addrB_7> 
+INFO:Xst:2261 - The FF/Latch <DDS2/addrA_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS2/addrB_8> 
+INFO:Xst:2261 - The FF/Latch <DDS5/addrB_4> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS5/addrA_4> 
+INFO:Xst:2261 - The FF/Latch <DDS1/addrA_1> in Unit <Main> is equivalent to the following 7 FFs/Latches, which will be removed : <DDS1/addrB_1> <DDS3/addrB_1> <DDS3/addrA_1> <DDS5/addrB_1> <DDS5/addrA_1> <DDS7/addrB_1> <DDS7/addrA_1> 
+INFO:Xst:2261 - The FF/Latch <DDS2/addrA_9> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS2/addrB_9> 
+INFO:Xst:2261 - The FF/Latch <DDS5/addrB_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS5/addrA_5> 
+INFO:Xst:2261 - The FF/Latch <DDS1/addrA_2> in Unit <Main> is equivalent to the following 3 FFs/Latches, which will be removed : <DDS1/addrB_2> <DDS5/addrB_2> <DDS5/addrA_2> 
+INFO:Xst:2261 - The FF/Latch <DDS1/addrA_3> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS1/addrB_3> 
+INFO:Xst:2261 - The FF/Latch <DDS5/addrB_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS5/addrA_6> 
+INFO:Xst:2261 - The FF/Latch <DDS1/addrA_4> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS1/addrB_4> 
+INFO:Xst:2261 - The FF/Latch <DDS5/addrB_7> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS5/addrA_7> 
+INFO:Xst:2261 - The FF/Latch <DDS1/addrA_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS1/addrB_5> 
+INFO:Xst:2261 - The FF/Latch <DDS5/addrB_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS5/addrA_8> 
+INFO:Xst:2261 - The FF/Latch <DDS1/addrA_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS1/addrB_6> 
+INFO:Xst:2261 - The FF/Latch <DDS5/addrB_9> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS5/addrA_9> 
+INFO:Xst:2261 - The FF/Latch <DDS4/addrB_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS4/addrA_2> 
+INFO:Xst:2261 - The FF/Latch <DDS1/addrA_7> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS1/addrB_7> 
+INFO:Xst:2261 - The FF/Latch <DDS4/addrB_3> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS4/addrA_3> 
+INFO:Xst:2261 - The FF/Latch <DDS1/addrA_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS1/addrB_8> 
+INFO:Xst:2261 - The FF/Latch <DDS4/addrB_4> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS4/addrA_4> 
+INFO:Xst:2261 - The FF/Latch <DDS1/addrA_9> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS1/addrB_9> 
+INFO:Xst:2261 - The FF/Latch <DDS4/addrB_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS4/addrA_5> 
+INFO:Xst:2261 - The FF/Latch <DDS4/addrB_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS4/addrA_6> 
+INFO:Xst:2261 - The FF/Latch <DDS4/addrB_7> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS4/addrA_7> 
+INFO:Xst:2261 - The FF/Latch <DDS4/addrB_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS4/addrA_8> 
+INFO:Xst:2261 - The FF/Latch <DDS3/addrB_2> in Unit <Main> is equivalent to the following 3 FFs/Latches, which will be removed : <DDS3/addrA_2> <DDS7/addrB_2> <DDS7/addrA_2> 
+INFO:Xst:2261 - The FF/Latch <DDS4/addrB_9> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS4/addrA_9> 
+INFO:Xst:2261 - The FF/Latch <DDS3/addrB_3> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS3/addrA_3> 
+INFO:Xst:2261 - The FF/Latch <DDS3/addrB_4> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS3/addrA_4> 
+INFO:Xst:2261 - The FF/Latch <DDS3/addrB_5> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS3/addrA_5> 
+INFO:Xst:2261 - The FF/Latch <DDS3/addrB_6> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS3/addrA_6> 
+INFO:Xst:2261 - The FF/Latch <DDS3/addrB_7> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS3/addrA_7> 
+INFO:Xst:2261 - The FF/Latch <DDS3/addrB_8> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS3/addrA_8> 
+INFO:Xst:2261 - The FF/Latch <DDS3/addrB_9> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <DDS3/addrA_9> 
 INFO:Xst:2261 - The FF/Latch <AUD1/PWMcount_0> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <SS_Driver1/Count_0> 
 INFO:Xst:2261 - The FF/Latch <AUD1/PWMcount_1> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <SS_Driver1/Count_1> 
 INFO:Xst:2261 - The FF/Latch <AUD1/PWMcount_2> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <SS_Driver1/Count_2> 
 INFO:Xst:2261 - The FF/Latch <AUD1/PWMcount_3> in Unit <Main> is equivalent to the following FF/Latch, which will be removed : <SS_Driver1/Count_3> 
+INFO:Xst:3203 - The FF/Latch <DDS6/addrB_10> in Unit <Main> is the opposite to the following FF/Latch, which will be removed : <DDS6/addrA_10> 
+INFO:Xst:3203 - The FF/Latch <DDS2/addrA_10> in Unit <Main> is the opposite to the following FF/Latch, which will be removed : <DDS2/addrB_10> 
+INFO:Xst:3203 - The FF/Latch <DDS5/addrB_10> in Unit <Main> is the opposite to the following FF/Latch, which will be removed : <DDS5/addrA_10> 
+INFO:Xst:3203 - The FF/Latch <DDS1/addrA_10> in Unit <Main> is the opposite to the following FF/Latch, which will be removed : <DDS1/addrB_10> 
+INFO:Xst:3203 - The FF/Latch <DDS4/addrB_10> in Unit <Main> is the opposite to the following FF/Latch, which will be removed : <DDS4/addrA_10> 
+INFO:Xst:3203 - The FF/Latch <DDS3/addrB_10> in Unit <Main> is the opposite to the following FF/Latch, which will be removed : <DDS3/addrA_10> 
+INFO:Xst:3203 - The FF/Latch <DDS7/addrB_10> in Unit <Main> is the opposite to the following FF/Latch, which will be removed : <DDS7/addrA_10> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block Main, actual ratio is 1.
 
 Final Macro Processing ...
 
@@ -458,8 +557,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 107
- Flip-Flops                                            : 107
+# Registers                                            : 174
+ Flip-Flops                                            : 174
 
 =========================================================================
 
@@ -482,30 +581,35 @@ Top Level Output File Name         : Main.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 292
-#      GND                         : 2
-#      INV                         : 5
-#      LUT1                        : 59
-#      LUT2                        : 11
-#      LUT3                        : 9
-#      LUT4                        : 13
-#      LUT5                        : 24
-#      LUT6                        : 28
-#      MUXCY                       : 74
-#      VCC                         : 2
-#      XORCY                       : 65
-# FlipFlops/Latches                : 107
-#      FD                          : 57
-#      FDE                         : 14
-#      FDRE                        : 32
+# BELS                             : 1006
+#      GND                         : 8
+#      INV                         : 15
+#      LUT1                        : 65
+#      LUT2                        : 229
+#      LUT3                        : 98
+#      LUT4                        : 57
+#      LUT5                        : 23
+#      LUT6                        : 55
+#      MUXCY                       : 267
+#      VCC                         : 8
+#      XORCY                       : 181
+# FlipFlops/Latches                : 174
+#      FD                          : 20
+#      FDE                         : 98
+#      FDR                         : 1
+#      FDRE                        : 50
+#      FDS                         : 1
 #      FDSE                        : 4
-# RAMS                             : 1
-#      RAMB36E1                    : 1
+# RAMS                             : 14
+#      RAMB18E1                    : 7
+#      RAMB36E1                    : 7
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 20
 #      IBUF                        : 2
 #      OBUF                        : 18
+# DSPs                             : 7
+#      DSP48E1                     : 7
 
 Device utilization summary:
 ---------------------------
@@ -514,25 +618,26 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             107  out of  126800     0%  
- Number of Slice LUTs:                  149  out of  63400     0%  
-    Number used as Logic:               149  out of  63400     0%  
+ Number of Slice Registers:             174  out of  126800     0%  
+ Number of Slice LUTs:                  542  out of  63400     0%  
+    Number used as Logic:               542  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    158
-   Number with an unused Flip Flop:      51  out of    158    32%  
-   Number with an unused LUT:             9  out of    158     5%  
-   Number of fully used LUT-FF pairs:    98  out of    158    62%  
-   Number of unique control sets:         7
+ Number of LUT Flip Flop pairs used:    552
+   Number with an unused Flip Flop:     378  out of    552    68%  
+   Number with an unused LUT:            10  out of    552     1%  
+   Number of fully used LUT-FF pairs:   164  out of    552    29%  
+   Number of unique control sets:        13
 
 IO Utilization: 
  Number of IOs:                          21
  Number of bonded IOBs:                  21  out of    210    10%  
 
 Specific Feature Utilization:
- Number of Block RAM/FIFO:                1  out of    135     0%  
-    Number using Block RAM only:          1
+ Number of Block RAM/FIFO:               11  out of    135     8%  
+    Number using Block RAM only:         11
  Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+ Number of DSP48E1s:                      7  out of    240     2%  
 
 ---------------------------
 Partition Resource Summary:
@@ -555,24 +660,30 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-Clk_100M                           | BUFGP                  | 108   |
+Clk_100M                           | BUFGP                  | 195   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-Control Signal                     | Buffer(FF name)                                                                                                                                                  | Load  |
------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
-DDS1/LU1/N1(DDS1/LU1/XST_GND:G)    | NONE(DDS1/LU1/U0/xst_blk_mem_generator/gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/WITH_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 2     |
------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                     | Buffer(FF name)                                                                                                                                    | Load  |
+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+DDS1/LU1/N1(DDS1/LU1/XST_GND:G)    | NONE(DDS1/LU1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram)| 2     |
+DDS2/LU1/N1(DDS2/LU1/XST_GND:G)    | NONE(DDS2/LU1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram)| 2     |
+DDS3/LU1/N1(DDS3/LU1/XST_GND:G)    | NONE(DDS3/LU1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram)| 2     |
+DDS4/LU1/N1(DDS4/LU1/XST_GND:G)    | NONE(DDS4/LU1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram)| 2     |
+DDS5/LU1/N1(DDS5/LU1/XST_GND:G)    | NONE(DDS5/LU1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram)| 2     |
+DDS6/LU1/N1(DDS6/LU1/XST_GND:G)    | NONE(DDS6/LU1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram)| 2     |
+DDS7/LU1/N1(DDS7/LU1/XST_GND:G)    | NONE(DDS7/LU1/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram)| 2     |
+-----------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 2.585ns (Maximum Frequency: 386.907MHz)
-   Minimum input arrival time before clock: 1.535ns
-   Maximum output required time after clock: 3.730ns
+   Minimum period: 6.869ns (Maximum Frequency: 145.584MHz)
+   Minimum input arrival time before clock: 1.137ns
+   Maximum output required time after clock: 7.514ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -581,48 +692,49 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk_100M'
-  Clock period: 2.585ns (frequency: 386.907MHz)
-  Total number of paths / destination ports: 2276 / 184
+  Clock period: 6.869ns (frequency: 145.584MHz)
+  Total number of paths / destination ports: 77854 / 583
 -------------------------------------------------------------------------
-Delay:               2.585ns (Levels of Logic = 18)
-  Source:            DDS1/addra_10 (FF)
-  Destination:       DDS1/addra_10 (FF)
+Delay:               6.869ns (Levels of Logic = 19)
+  Source:            DDS1/Mmult_n0028 (DSP)
+  Destination:       AUD1/AUD_out (FF)
   Source Clock:      Clk_100M rising
   Destination Clock: Clk_100M rising
 
-  Data Path: DDS1/addra_10 to DDS1/addra_10
+  Data Path: DDS1/Mmult_n0028 to AUD1/AUD_out
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               3   0.361   0.289  DDS1/addra_10 (DDS1/addra_10)
-     INV:I->O              1   0.113   0.000  DDS1/Mcompar_GND_10_o_addra[31]_LessThan_3_o_lut<0>1_INV_0 (DDS1/Mcompar_GND_10_o_addra[31]_LessThan_3_o_lut<0>)
-     MUXCY:S->O            1   0.353   0.000  DDS1/Mcompar_GND_10_o_addra[31]_LessThan_3_o_cy<0> (DDS1/Mcompar_GND_10_o_addra[31]_LessThan_3_o_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  DDS1/Mcompar_GND_10_o_addra[31]_LessThan_3_o_cy<1> (DDS1/Mcompar_GND_10_o_addra[31]_LessThan_3_o_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  DDS1/Mcompar_GND_10_o_addra[31]_LessThan_3_o_cy<2> (DDS1/Mcompar_GND_10_o_addra[31]_LessThan_3_o_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  DDS1/Mcompar_GND_10_o_addra[31]_LessThan_3_o_cy<3> (DDS1/Mcompar_GND_10_o_addra[31]_LessThan_3_o_cy<3>)
-     MUXCY:CI->O          11   0.023   0.342  DDS1/Mcompar_GND_10_o_addra[31]_LessThan_3_o_cy<4> (DDS1/Mcompar_GND_10_o_addra[31]_LessThan_3_o_cy<4>)
-     LUT3:I2->O            1   0.097   0.000  DDS1/Maccum_addra_lut<0> (DDS1/Maccum_addra_lut<0>)
-     MUXCY:S->O            1   0.353   0.000  DDS1/Maccum_addra_cy<0> (DDS1/Maccum_addra_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  DDS1/Maccum_addra_cy<1> (DDS1/Maccum_addra_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  DDS1/Maccum_addra_cy<2> (DDS1/Maccum_addra_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  DDS1/Maccum_addra_cy<3> (DDS1/Maccum_addra_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  DDS1/Maccum_addra_cy<4> (DDS1/Maccum_addra_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  DDS1/Maccum_addra_cy<5> (DDS1/Maccum_addra_cy<5>)
-     MUXCY:CI->O           1   0.023   0.000  DDS1/Maccum_addra_cy<6> (DDS1/Maccum_addra_cy<6>)
-     MUXCY:CI->O           1   0.023   0.000  DDS1/Maccum_addra_cy<7> (DDS1/Maccum_addra_cy<7>)
-     MUXCY:CI->O           1   0.023   0.000  DDS1/Maccum_addra_cy<8> (DDS1/Maccum_addra_cy<8>)
-     MUXCY:CI->O           0   0.023   0.000  DDS1/Maccum_addra_cy<9> (DDS1/Maccum_addra_cy<9>)
-     XORCY:CI->O           1   0.370   0.000  DDS1/Maccum_addra_xor<10> (DDS1/Result<10>)
-     FD:D                      0.008          DDS1/addra_10
+     DSP48E1:CLK->P16      2   0.329   0.516  DDS1/Mmult_n0028 (PWMout1<0>)
+     LUT3:I0->O            1   0.097   0.295  ADDER_FOR_MULTADD_Madd1 (ADDER_FOR_MULTADD_Madd1)
+     LUT4:I3->O            1   0.097   0.000  ADDER_FOR_MULTADD_Madd1_lut<0>1 (ADDER_FOR_MULTADD_Madd1_lut<0>1)
+     MUXCY:S->O            1   0.353   0.000  ADDER_FOR_MULTADD_Madd1_cy<0>_0 (ADDER_FOR_MULTADD_Madd1_cy<0>1)
+     MUXCY:CI->O           1   0.023   0.000  ADDER_FOR_MULTADD_Madd1_cy<0>_1 (ADDER_FOR_MULTADD_Madd1_cy<0>2)
+     MUXCY:CI->O           1   0.023   0.000  ADDER_FOR_MULTADD_Madd1_cy<0>_2 (ADDER_FOR_MULTADD_Madd1_cy<0>3)
+     MUXCY:CI->O           1   0.023   0.000  ADDER_FOR_MULTADD_Madd1_cy<0>_3 (ADDER_FOR_MULTADD_Madd1_cy<0>4)
+     XORCY:CI->O           2   0.370   0.516  ADDER_FOR_MULTADD_Madd1_xor<0>_4 (ADDER_FOR_MULTADD_Madd_51)
+     LUT3:I0->O            1   0.097   0.295  ADDER_FOR_MULTADD_Madd35 (ADDER_FOR_MULTADD_Madd35)
+     LUT4:I3->O            1   0.097   0.000  ADDER_FOR_MULTADD_Madd3_lut<0>6 (ADDER_FOR_MULTADD_Madd3_lut<0>6)
+     MUXCY:S->O            1   0.353   0.000  ADDER_FOR_MULTADD_Madd3_cy<0>_5 (ADDER_FOR_MULTADD_Madd3_cy<0>6)
+     XORCY:CI->O           2   0.370   0.516  ADDER_FOR_MULTADD_Madd3_xor<0>_6 (ADDER_FOR_MULTADD_Madd_73)
+     LUT3:I0->O            1   0.097   0.295  ADDER_FOR_MULTADD_Madd57 (ADDER_FOR_MULTADD_Madd57)
+     LUT4:I3->O            1   0.097   0.000  ADDER_FOR_MULTADD_Madd5_lut<0>8 (ADDER_FOR_MULTADD_Madd5_lut<0>8)
+     MUXCY:S->O            1   0.353   0.000  ADDER_FOR_MULTADD_Madd5_cy<0>_7 (ADDER_FOR_MULTADD_Madd5_cy<0>8)
+     XORCY:CI->O           2   0.370   0.561  ADDER_FOR_MULTADD_Madd5_xor<0>_8 (ADDER_FOR_MULTADD_Madd_95)
+     LUT4:I0->O            0   0.097   0.000  AUD1/Mcompar_PWM[10]_PWMcount[10]_LessThan_3_o_lutdi4 (AUD1/Mcompar_PWM[10]_PWMcount[10]_LessThan_3_o_lutdi4)
+     MUXCY:DI->O           1   0.337   0.000  AUD1/Mcompar_PWM[10]_PWMcount[10]_LessThan_3_o_cy<4> (AUD1/Mcompar_PWM[10]_PWMcount[10]_LessThan_3_o_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  AUD1/Mcompar_PWM[10]_PWMcount[10]_LessThan_3_o_cy<5> (AUD1/Mcompar_PWM[10]_PWMcount[10]_LessThan_3_o_cy<5>)
+     MUXCY:CI->O           1   0.262   0.000  AUD1/Mcompar_PWM[10]_PWMcount[10]_LessThan_3_o_cy<5>_inv1_cy (AUD1/PWM[10]_PWMcount[10]_LessThan_3_o)
+     FD:D                      0.008          AUD1/AUD_out
     ----------------------------------------
-    Total                      2.585ns (1.954ns logic, 0.631ns route)
-                                       (75.6% logic, 24.4% route)
+    Total                      6.869ns (3.876ns logic, 2.993ns route)
+                                       (56.4% logic, 43.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk_100M'
   Total number of paths / destination ports: 30 / 30
 -------------------------------------------------------------------------
-Offset:              1.535ns (Levels of Logic = 2)
+Offset:              1.137ns (Levels of Logic = 2)
   Source:            UART_Rx (PAD)
   Destination:       Receive1/PRSCL_13 (FF)
   Destination Clock: Clk_100M rising
@@ -631,36 +743,45 @@ Offset:              1.535ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            13   0.001   0.749  UART_Rx_IBUF (UART_Rx_IBUF)
-     LUT6:I0->O           14   0.097   0.339  Receive1/_n00894 (Receive1/_n0089)
-     FDRE:R                    0.349          Receive1/PRSCL_8
+     IBUF:I->O            13   0.001   0.351  UART_Rx_IBUF (UART_Rx_IBUF)
+     LUT6:I5->O           14   0.097   0.339  Receive1/_n00894 (Receive1/_n0089)
+     FDRE:R                    0.349          Receive1/PRSCL_0
     ----------------------------------------
-    Total                      1.535ns (0.447ns logic, 1.088ns route)
-                                       (29.1% logic, 70.9% route)
+    Total                      1.137ns (0.447ns logic, 0.690ns route)
+                                       (39.3% logic, 60.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk_100M'
-  Total number of paths / destination ports: 152 / 12
+  Total number of paths / destination ports: 60716 / 12
 -------------------------------------------------------------------------
-Offset:              3.730ns (Levels of Logic = 6)
-  Source:            AUD1/PWMcount_2 (FF)
+Offset:              7.514ns (Levels of Logic = 15)
+  Source:            DDS1/Mmult_n0028 (DSP)
   Destination:       SevenSegment<6> (PAD)
   Source Clock:      Clk_100M rising
 
-  Data Path: AUD1/PWMcount_2 to SevenSegment<6>
+  Data Path: DDS1/Mmult_n0028 to SevenSegment<6>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q               5   0.361   0.712  AUD1/PWMcount_2 (AUD1/PWMcount_2)
-     LUT6:I0->O            1   0.097   0.511  SS_Driver1/PWMcount[7]_PWM[7]_LessThan_10_o2 (SS_Driver1/PWMcount[7]_PWM[7]_LessThan_10_o1)
-     LUT3:I0->O            1   0.097   0.295  SS_Driver1/PWMcount[7]_PWM[7]_LessThan_10_o11 (SS_Driver1/PWMcount[7]_PWM[7]_LessThan_10_o11)
-     LUT5:I4->O            1   0.097   0.379  SS_Driver1/PWMcount[7]_PWM[7]_LessThan_10_o12 (SS_Driver1/PWMcount[7]_PWM[7]_LessThan_10_o2)
+     DSP48E1:CLK->P16      2   0.329   0.516  DDS1/Mmult_n0028 (PWMout1<0>)
+     LUT3:I0->O            1   0.097   0.295  ADDER_FOR_MULTADD_Madd1 (ADDER_FOR_MULTADD_Madd1)
+     LUT4:I3->O            1   0.097   0.000  ADDER_FOR_MULTADD_Madd1_lut<0>1 (ADDER_FOR_MULTADD_Madd1_lut<0>1)
+     MUXCY:S->O            1   0.353   0.000  ADDER_FOR_MULTADD_Madd1_cy<0>_0 (ADDER_FOR_MULTADD_Madd1_cy<0>1)
+     XORCY:CI->O           2   0.370   0.561  ADDER_FOR_MULTADD_Madd1_xor<0>_1 (ADDER_FOR_MULTADD_Madd_21)
+     LUT4:I0->O            1   0.097   0.000  ADDER_FOR_MULTADD_Madd3_lut<0>2 (ADDER_FOR_MULTADD_Madd3_lut<0>2)
+     MUXCY:S->O            1   0.353   0.000  ADDER_FOR_MULTADD_Madd3_cy<0>_1 (ADDER_FOR_MULTADD_Madd3_cy<0>2)
+     XORCY:CI->O           2   0.370   0.516  ADDER_FOR_MULTADD_Madd3_xor<0>_2 (ADDER_FOR_MULTADD_Madd_33)
+     LUT3:I0->O            1   0.097   0.295  ADDER_FOR_MULTADD_Madd53 (ADDER_FOR_MULTADD_Madd53)
+     LUT4:I3->O            1   0.097   0.000  ADDER_FOR_MULTADD_Madd5_lut<0>4 (ADDER_FOR_MULTADD_Madd5_lut<0>4)
+     MUXCY:S->O            1   0.353   0.000  ADDER_FOR_MULTADD_Madd5_cy<0>_3 (ADDER_FOR_MULTADD_Madd5_cy<0>4)
+     XORCY:CI->O           3   0.370   0.693  ADDER_FOR_MULTADD_Madd5_xor<0>_4 (ADDER_FOR_MULTADD_Madd_55)
+     LUT5:I0->O            1   0.097   0.379  SS_Driver1/PWMcount[7]_PWM[7]_LessThan_10_o1 (SS_Driver1/PWMcount[7]_PWM[7]_LessThan_10_o2)
      LUT6:I4->O            6   0.097   0.706  SS_Driver1/Mmux_SevenSegment221 (SS_Driver1/Mmux_SevenSegment22)
      LUT5:I0->O            1   0.097   0.279  SS_Driver1/Mmux_SevenSegment71 (SevenSegment_6_OBUF)
      OBUF:I->O                 0.000          SevenSegment_6_OBUF (SevenSegment<6>)
     ----------------------------------------
-    Total                      3.730ns (0.846ns logic, 2.884ns route)
-                                       (22.7% logic, 77.3% route)
+    Total                      7.514ns (3.274ns logic, 4.240ns route)
+                                       (43.6% logic, 56.4% route)
 
 =========================================================================
 
@@ -672,21 +793,21 @@ Clock to Setup on destination clock Clk_100M
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clk_100M       |    2.585|         |         |         |
+Clk_100M       |    6.869|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.33 secs
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.24 secs
  
 --> 
 
 
-Total memory usage is 507576 kilobytes
+Total memory usage is 509140 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   60 (   0 filtered)
-Number of infos    :   15 (   0 filtered)
+Number of warnings :   53 (   0 filtered)
+Number of infos    :   88 (   0 filtered)
 

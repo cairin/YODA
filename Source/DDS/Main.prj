@@ -1,4 +1,4 @@
-verilog work "ipcore_dir/BROM_Sin.v"
+verilog work "blk_mem_gen_v7_3.v"
 verilog work "BCD_Decoder.v"
 verilog work "SS_Driver.v"
 verilog work "Receive.v"

@@ -6,7 +6,7 @@ ise -dd _ngo -sd ipcore_dir -nt timestamp -uc Main.ucf -p xc7a100t-csg324-3
 Main.ngc Main.ngd
 
 Reading NGO file "/home/bluelabuser/Desktop/DDS/Main.ngc" ...
-Loading design module "ipcore_dir/BROM_Sin.ngc"...
+Loading design module "/home/bluelabuser/Desktop/DDS/blk_mem_gen_v7_3.ngc"...
 Gathering constraint information from source properties...
 Done.
 
@@ -32,10 +32,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 458964 kilobytes
+Total memory usage is 462596 kilobytes
 
 Writing NGD file "Main.ngd" ...
-Total REAL time to NGDBUILD completion:  5 sec
-Total CPU time to NGDBUILD completion:   5 sec
+Total REAL time to NGDBUILD completion:  7 sec
+Total CPU time to NGDBUILD completion:   7 sec
 
 Writing NGDBUILD log file "Main.bld"...
