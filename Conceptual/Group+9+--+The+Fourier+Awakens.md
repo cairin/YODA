@@ -14,8 +14,8 @@ Paper Review
 ------------
 
 Section I:
-- [ ] Change "'template'" to "`template'"
-- [ ] Paragraph 3: don't give the full reference in the text.  Simply say: "DDS was first proposed in 1971 by Tierney, et. al [3]".
+- [x] Change "'template'" to "`template'".
+- [x] Paragraph 3: don't give the full reference in the text.  Simply say: "DDS was first proposed in 1971 by Tierney, et. al [3]".
 - [ ] Equation 1: have a look at [link](http://www.mash.dept.shef.ac.uk/Resources/web-rcostheta-alphaetc.pdf)
 - [ ] It might help you to analyse the DDS process:
   1. Integrate the frequency by means of first-order Euler to obtain phase.
@@ -26,7 +26,7 @@ Section I-A:
 - [ ] Figure 1: is "n" 24 or 48?  Rather draw your own block diagram that use an existing one that doesn't suit your needs.
 - [ ] Don't call it a "parallel delta phase register".  Call it a "frequency word".
 - [ ] You can remove figure 2.  It's easier to see it in terms of "integrate frequency to obtain phase".
-- [ ] Change "'template'" to "`template'"
+- [x] Change "'template'" to "`template'"
 - [ ] Move the explanation of the DDS internals to section III.
 
 Section II-A:
@@ -38,10 +38,10 @@ Section II-A:
 - [ ] If you want to generate a very accurate single waveform, it's much easier to program the LUT with the waveform you want and play that back with the selected frequency word.  In that case you'll also use a proper DAC and not PWM.
 
 Section III-A:
-- [ ] I don't know what a "Mhz" is.  I think you might mean "MHz".
-- [ ] Always put a space between the value and the unit.
-- [ ] The S.I. unit of baud rate is "Baud", or "Bd", not "Hz".
-- [ ] Never line-break between the value and the unit.  Use an "unbroken space".
+- [x] I don't know what a "Mhz" is.  I think you might mean "MHz".
+- [x] Always put a space between the value and the unit.
+- [x] The S.I. unit of baud rate is "Baud", or "Bd", not "Hz".
+- [ ] Never line-break between the value and the unit.  Use an "unbroken space". (~)
 
 Section III-B:
 - [ ] As mentioned earlier, it's much more efficient to add a phase shift and calculate the cosine once.
@@ -63,11 +63,11 @@ Section IV-C:
 - [ ] Slightly more useful, but I don't think DDS is well-suited for GPU, unless you simply want to calculate the waveform instead of providing output on a DAC...
 
 Section IV-D:
-- [ ] Typeset it as "$\mathrm{O}(\log(N))$".  "n" is generally a counter, whereas "N" represents the total.
+- [x] Typeset it as "$\mathrm{O}(\log(N))$".  "n" is generally a counter, whereas "N" represents the total.
 - [ ] I'm not sure you need this section IV at all.  If you need space to present more results in the final paper, this is the section to remove.
 
 Section V:
-- [ ] Change "outputted" to "output"
+- [x] Change "outputted" to "output"
 
 
 ----------
