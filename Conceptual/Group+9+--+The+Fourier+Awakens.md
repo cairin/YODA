@@ -16,18 +16,18 @@ Paper Review
 Section I:
 - [x] Change "'template'" to "`template'".
 - [x] Paragraph 3: don't give the full reference in the text.  Simply say: "DDS was first proposed in 1971 by Tierney, et. al [3]".
-- [ ] Equation 1: have a look at [link](http://www.mash.dept.shef.ac.uk/Resources/web-rcostheta-alphaetc.pdf)
+- [X] Equation 1: have a look at [link](http://www.mash.dept.shef.ac.uk/Resources/web-rcostheta-alphaetc.pdf)
 - [ ] It might help you to analyse the DDS process:
   1. Integrate the frequency by means of first-order Euler to obtain phase.
   2. Pass the phase through a cosine function to obtain instantaneous amplitude.
   3. Multiply by the overall amplitude to obtain the output signal.
 
 Section I-A:
-- [ ] Figure 1: is "n" 24 or 48?  Rather draw your own block diagram that use an existing one that doesn't suit your needs.
-- [ ] Don't call it a "parallel delta phase register".  Call it a "frequency word".
-- [ ] You can remove figure 2.  It's easier to see it in terms of "integrate frequency to obtain phase".
-- [x] Change "'template'" to "`template'"
-- [ ] Move the explanation of the DDS internals to section III.
+- [X] Figure 1: is "n" 24 or 48?  Rather draw your own block diagram that use an existing one that doesn't suit your needs.
+- [X] Don't call it a "parallel delta phase register".  Call it a "frequency word".
+- [X] You can remove figure 2.  It's easier to see it in terms of "integrate frequency to obtain phase".
+- [X] Change "'template'" to "`template'"
+- [X] Move the explanation of the DDS internals to section III.
 
 Section II-A:
 - [ ] The PC interface is great for the prototype, but no-one will buy such a product.  A keyboard is much easier to sell ;-)
@@ -48,7 +48,7 @@ Section III-B:
 - [ ] I like your "no spacial resources" for the Taylor series option ;-)  Must be a magical FPGA...
 - [ ] If you pipeline the Taylor series you can get a sample every clock cycle.
   Your argument about "will limit the maximum frequency" is therefore invalid. one?
-- [ ] Figure 4: draw the multiply and sum output to the right of the LUT. This will give a more clear image of the data-flow.
+- [X] Figure 4: draw the multiply and sum output to the right of the LUT. This will give a more clear image of the data-flow.
 
 Section III-D:
 - [ ] This section requires more detail regarding PWM generation.  Especially limitation is clock frequency and resolution. You can also add a section on noise-shaping: [link](http://sdrg.ee.uct.ac.za/Bootcamp/Resources/Practicals.pdf> section 4.1.2)
