@@ -11,8 +11,8 @@
 
 - [x] Part 1: Feature List
 - [x] Part 2: Conceptual Design
-- [ ] Part 3: Final Paper
-- [ ] Part 4: Conference Presentation
+- [x] Part 3: Final Paper
+- [x] Part 4: Conference Presentation
 
 ***
 
