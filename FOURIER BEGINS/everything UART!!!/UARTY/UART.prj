@@ -1,6 +1,0 @@
-verilog work "BCD_Decoder.v"
-verilog work "Transmit.v"
-verilog work "SS_Driver.v"
-verilog work "Receive.v"
-verilog work "Delay_Reset.v"
-verilog work "UART.v"

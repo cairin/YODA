@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=/home/bluelabuser/Desktop/UARTY/UART.ncd
-OUTFILE=/home/bluelabuser/Desktop/UARTY/UART.bit
-FAMILY=Artix7
-PART=xc7a100t-3csg324
-WORKINGDIR=/home/bluelabuser/Desktop/UARTY
-LICENSE=ISE
-USER_INFO=178739136_178739138_210553786_049
