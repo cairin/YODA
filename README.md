@@ -7,5 +7,5 @@
 
 This repository details the conceptual and prototype design of a function generator using the Fourier Series estimation through the use of Direct Digital Synthesis techniques. Various architectures are discussed to determine what is optimal for this design.
 
-This Project was completed by @RobertJKatz, @BenjiLewis and @cairinmichie.
+This Project was completed by [Robbie Katz](https://github.com/RobertJKatz), [Benji Lewis](https://github.com/BenjiLewis) and [Cairin Michie](https://github.com/cairinmichie).
 
